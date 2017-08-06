@@ -43,8 +43,8 @@
 	color: #d9d9d9;
 	width: 220px;
 	position: relative;
-	top: 350px;
-	right: -140px;
+	top: 240px;
+	right: 75px;
 	-webkit-text-stroke: .25px black;
 	background: -webkit-linear-gradient(#700, #135);
 	border: 1px solid #d9d9d9;
@@ -58,8 +58,8 @@
 .name {
 	color: #990000;
 	position: relative;
-	top: 315px;
-	left: -370px;
+	top: 275px;
+	left: -425px;
 	font-family: 'Lobster', cursive;
 	font-size: 75px;
 	font-style: italic;
@@ -70,3 +70,44 @@
   	-webkit-background-clip: text;
   	-webkit-text-fill-color: transparent;
 }
+input {
+	border-radius: 10px;
+	text-align: center;
+}
+#landing-search {
+	color: #d9d9d9;
+	position: relative;
+	top: 200px;
+	left: -260px;
+}
+.search-submit {
+	font-size: 30px;
+	color: #d9d9d9;
+	width: 220px;
+	position: relative;
+	top: 160px;
+	right: -480px;
+	-webkit-text-stroke: .25px black;
+	background: -webkit-linear-gradient(#700, #135);
+	border: 1px solid #d9d9d9;
+	font-family: 'Lobster', cursive;
+	letter-spacing: 1px;
+	border-radius: 5px;
+	float: left;
+
+}
+hr {
+	position: relative;
+	top: 230px;
+	left: -266px;
+	background: -webkit-linear-gradient(#135, #700);
+	/*border: 1px solid #d9d9d9;*/
+	height: 7px;
+	border-radius: 5px;
+	width: 620px;
+}
+.glyphicon-search {
+	margin-top: 5px;
+
+}
+
