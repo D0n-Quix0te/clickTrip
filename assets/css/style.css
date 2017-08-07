@@ -35,6 +35,9 @@
     from { opacity: 0; }
     to   { opacity: 1; }
 }
+.background2 {
+	background-image: url("../images/")
+}
 .row {
 	vertical-align: middle;
 }
@@ -81,10 +84,11 @@ input {
 	left: -465px;
 	height: 40px;
 	width: 200px;
+	border: 1px solid #d9d9d9;
 }
 .search-query {
 	background: url("../images/photographersilhouette.png") no-repeat right;
-	background-size: 32px 32px;
+	
 
 
 }
@@ -123,10 +127,6 @@ hr {
 	width: 40px;
 	position: relative;
 	top: -10px;
-}
-.container .secondary {
-	margin: 0px;
-	width: 100%;
 }
 .navbar {
 	margin-top: 10px;
