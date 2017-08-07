@@ -36,8 +36,11 @@
     to   { opacity: 1; }
 }
 .background2 {
-	background-image: url("../images/CNHKBWBLDGAirplane.jpg");
+	background-image: url("../images/CNEveWL1.jpg");
 	background-size: cover;
+}
+.row-1-first {
+	background-image: url("../images/BerlinShellhaus.jpg");
 }
 .row {
 	vertical-align: middle;
@@ -132,5 +135,8 @@ hr {
 .navbar {
 	margin-top: 10px;
 	margin-bottom: 10px;
+}
+ul {
+	text-align: left;
 }
 
