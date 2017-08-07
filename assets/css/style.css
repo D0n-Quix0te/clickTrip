@@ -39,8 +39,27 @@
 	background-image: url("../images/CNEveWL1.jpg");
 	background-size: cover;
 }
-.row-1-first {
-	background-image: url("../images/BerlinShellhaus.jpg");
+.panel {
+	margin-bottom: 0px;
+}
+.panel-header {
+	font-size: 24px;
+}
+.Berlin {
+	background-image: url("../images/BerlinShellHaus.jpg");
+	background-position: center;
+	background-size: cover;
+	height: 350px;
+}
+.Kyoto {
+	background-image: url("../images/Kyoto-shiShrineRV.jpg");
+	background-position: center;
+	background-size: cover;
+	height: 350px;
+	margin-top: 0px;
+}
+.KC {
+
 }
 .row {
 	vertical-align: middle;
@@ -139,4 +158,5 @@ hr {
 ul {
 	text-align: left;
 }
+
 
