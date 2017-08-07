@@ -1,3 +1,6 @@
+.container{
+	margin: 0px;
+}
 .background {
 	background-image: url("../images/COSandDunesBeerBackpack.jpg");
 	background-size: cover;
@@ -59,7 +62,19 @@
 	margin-top: 0px;
 }
 .KC {
-
+	background-image: url("../images/KSKCSymphonyBW.jpg");
+	background-position: center;
+	background-size: cover;
+	height: 350px;
+}
+.HK {
+	background-image: url("../images/CNHKTheLight6.jpg");
+	background-position: center;
+	background-size: cover;
+	height: 350px;
+}
+.about {
+	height: 795px;
 }
 .row {
 	vertical-align: middle;
@@ -157,6 +172,9 @@ hr {
 }
 ul {
 	text-align: left;
+}
+.navbar {
+	width: 100%;
 }
 
 
