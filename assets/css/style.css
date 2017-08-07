@@ -36,7 +36,8 @@
     to   { opacity: 1; }
 }
 .background2 {
-	background-image: url("../images/")
+	background-image: url("../images/CNHKBWBLDGAirplane.jpg");
+	background-size: cover;
 }
 .row {
 	vertical-align: middle;
@@ -123,12 +124,13 @@ hr {
 
 }
 #logo {
-	height: 40px;
-	width: 40px;
+	height: 50px;
+	width: 50px;
 	position: relative;
-	top: -10px;
+	top: -5px;
 }
 .navbar {
 	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
