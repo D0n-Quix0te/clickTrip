@@ -118,4 +118,17 @@ hr {
 	margin-top: 5px;
 
 }
+#logo {
+	height: 40px;
+	width: 40px;
+	position: relative;
+	top: -10px;
+}
+.container .secondary {
+	margin: 0px;
+	width: 100%;
+}
+.navbar {
+	margin-top: 10px;
+}
 
