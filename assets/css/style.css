@@ -43,7 +43,7 @@
 	color: #d9d9d9;
 	width: 220px;
 	position: relative;
-	top: 240px;
+	top: 200px;
 	right: 75px;
 	-webkit-text-stroke: .25px black;
 	background: -webkit-linear-gradient(#700, #135);
@@ -74,13 +74,21 @@ input {
 	border-radius: 10px;
 	text-align: center;
 }
-#landing-search {
+#search-text-input {
 	color: #d9d9d9;
 	position: relative;
-	top: 200px;
-	left: -260px;
+	top: 250px;
+	left: -465px;
+	height: 40px;
+	width: 200px;
 }
-.search-submit {
+.search-query {
+	background: url("../images/photographersilhouette.png") no-repeat right;
+	background-size: 32px 32px;
+
+
+}
+/*.search-submit {
 	font-size: 30px;
 	color: #d9d9d9;
 	width: 220px;
@@ -95,7 +103,7 @@ input {
 	border-radius: 5px;
 	float: left;
 
-}
+}*/
 hr {
 	position: relative;
 	top: 230px;
