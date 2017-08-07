@@ -36,8 +36,30 @@
     to   { opacity: 1; }
 }
 .background2 {
-	background-image: url("../images/CNHKBWBLDGAirplane.jpg");
+	background-image: url("../images/CNEveWL1.jpg");
 	background-size: cover;
+}
+.panel {
+	margin-bottom: 0px;
+}
+.panel-header {
+	font-size: 24px;
+}
+.Berlin {
+	background-image: url("../images/BerlinShellHaus.jpg");
+	background-position: center;
+	background-size: cover;
+	height: 350px;
+}
+.Kyoto {
+	background-image: url("../images/Kyoto-shiShrineRV.jpg");
+	background-position: center;
+	background-size: cover;
+	height: 350px;
+	margin-top: 0px;
+}
+.KC {
+
 }
 .row {
 	vertical-align: middle;
@@ -133,4 +155,8 @@ hr {
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
+ul {
+	text-align: left;
+}
+
 
