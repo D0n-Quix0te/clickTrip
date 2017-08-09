@@ -27,7 +27,6 @@ var database = firebase.database();
 
 //Login for Github
 function loginGH(){
-firebase.auth().signInWithRedirect(provider);
     firebase.auth().signInWithPopup(provider).then(function(result) {
       // This gives you a GitHub Access Token. You can use it to access the GitHub API.
       var token = result.credential.accessToken;
