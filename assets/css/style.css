@@ -244,5 +244,8 @@ goes here */
 .vertical.flip-container:hover .flipper {
   transform: rotateX(-180deg);
 }
+#userInput {
+	display: none;
+}
 
 
