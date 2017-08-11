@@ -12,7 +12,7 @@ firebase.initializeApp(config);
 
 var database = firebase.database();
 
-  var provider = new firebase.auth.GithubAuthProvider();
+  var provider = new firebase.auth.GoogleAuthProvider();
   var userId = "";
 
 
