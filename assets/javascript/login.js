@@ -34,7 +34,7 @@ function loginGoogle(){
       var token = result.credential.accessToken;
       // The signed-in user info.
       user = result.user;
-
+      console.log(user);
 
     }).catch(function(error) {
       // Handle Errors here.
@@ -48,8 +48,7 @@ function loginGoogle(){
     });
 }
 
-
-var user = firebase.auth().currentUser;
+user = firebase.auth().result.user;
 
 if (user != null) {
   user.providerData.forEach(function (profile) {
