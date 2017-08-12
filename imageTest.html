@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="assets/css/upload.css">
+    <title>Image Upload Test</title>
+  </head>
+  <body>
+
+    <div class="container" id="login">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2>Welcome to clickTrip!</h2>
+        <button type="button" class="btn btn-primary" onclick="signIn();"><i class="fa fa-google-plus"></i> Sign-In With Google</button>
+
+      </div>
+    </div>
+
+    <div class="container" id="welcome">
+    <div class="row">
+      <div class="col-lg-6">
+        <h2 id="welcomeText"></h2>
+      </div>
+
+
+    <h1>Upload Image</h1>
+    <label class="upload-group">
+      Upload Image
+      <input type="file" class="upload-group" id="file">
+    </label>
+    <button type="button" class="btn btn-primary" id="uploadButton" onclick="uploadFile()">Submit</button>
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      /*var config = {
+        apiKey: "AIzaSyCRSaq9IDjSHw50sM_9fMbgD2jR74DarUA",
+        authDomain: "cliptrip-24402.firebaseapp.com",
+        databaseURL: "https://cliptrip-24402.firebaseio.com",
+        projectId: "cliptrip-24402",
+        storageBucket: "cliptrip-24402.appspot.com",
+        messagingSenderId: "401198821400"
+      };
+      firebase.initializeApp(config);*/
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="assets/javascript/imageUploadTest.js"></script>
+    </body>
+</html>

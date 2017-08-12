@@ -3,13 +3,21 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
-	
+	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Lobster|Poppins|Righteous|Sedgwick+Ave" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<title>clickTrip</title>
+	<!-- Our CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    
+    
+    <title>clickTrip</title>
 </head>
+
+
 <body class="background2">
 	<div class="container secondary">
 		<nav class="navbar navbar-default">
@@ -31,8 +39,32 @@
         					<li><a href="#"> About </a></li>
         					<li class="dropdown">
           						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Tips <span class="caret"></span></a>
-          				</ul>
+          					<li><a id="upload-Button-Initial" href=""> Upload </a></li>
+          					<li class="dropdown">
+          						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></a>
+                            </li>
+
+
         </nav>
+        <div class="row" id="userInput">
+        	<div class="col-lg-4">
+        		<form>
+  					<div class="form-group">   
+    					<input type="text" class="form-control" id="city-Input" aria-describedby="emailHelp" placeholder="City">
+    					</div>
+    			</form>
+    		</div>   				
+			<div class="col-lg-4">
+				<form>
+					<div class="form-group">
+    					<input type="text" class="form-control" id="country" 		aria-describedby="country-Input" placeholder="Country">
+    				</div>
+    			</form>
+    		</div>
+  			<div class="col-lg-4">
+  				<button class="upload-Button" type="button">Upload</button>
+  			</div>
+  		</div>
         <div class="row initial">
         	<div class="text-center">
         		<div class="col-lg-4">
@@ -76,22 +108,25 @@
         			</div>	
         		</div>
         		<div class="col-lg-4">
-        			<div class="panel panel-default about">
-        				<div class="panel panel-header">
-        					About
-        				</div>
-        				<div class="panel panel-body">
-        				</div>
-        				<div class="panel panel-body">
-        					<ul class="personal-info">
-        						<li> Name: </li>
-        						<li> Location: </li>
-        						<li> Countries Visited: </li>
-        						<li> About Me: </li>
-							</ul>
-							<div class="photo-id">
-								<img class="thumbnail" src="thumbnail" alt="your_photo">
-						</div>
+        			<div class="panel panel-default cityinfo">
+                       
+                        <div class="panel panel-header">
+                            About
+                        </div>
+                        <div class="panel panel-body">
+                        </div>
+                        <div class="panel panel-body">
+                            <ul class="personal-info">
+                                <li id="name-display"> Name: </li>
+                                <li id="email"> E-mail: </li>
+                                <li> Location: </li>
+                                <li> Countries Visited: </li>
+                                <li> About Me: </li>
+                            </ul>
+<!--                             <div class="photo-id">
+                                <img class="thumbnail" src="#" alt="your_photo">
+   
+						</div> -->
 					</div>
         		</div>
         	</div>
@@ -100,11 +135,11 @@
 
 
 
-
-
-
-
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- <script type="text/javascript" src="assets/javascript/firebase.js"></script> -->
+<script type="text/javascript" src="assets/javascript/login.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+<script type="text/javascript" src="assets/javascript/java.js"></script>
 
 
 

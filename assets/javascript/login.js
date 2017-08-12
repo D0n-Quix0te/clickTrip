@@ -12,23 +12,25 @@ firebase.initializeApp(config);
 
 var database = firebase.database();
 
-  var provider = new firebase.auth.GithubAuthProvider();
+  var provider = new firebase.auth.GoogleAuthProvider();
   var userId = "";
+  var name = "";
+  var email = "";
 
 
   $("#loginbutton").on("click", function(event){
     event.preventDefault();
-    loginGH();
-  }); // End of sign on with GitHub
+    loginGoogle();
+  }); 
 
-  // $('#signOut').on("click", function(){
-  //   signout();
-  // });
+  $('#signOut').on("click", function(){
+    signout();
+  });
 
-//Login for Github
-function loginGH(){
+//Login for Google
+function loginGoogle(){
     firebase.auth().signInWithPopup(provider).then(function(result) {
-      // This gives you a GitHub Access Token. You can use it to access the GitHub API.
+      // This gives you a Google Access Token. You can use it to access the Google API.
       var token = result.credential.accessToken;
       // The signed-in user info.
       user = result.user;
@@ -38,14 +40,16 @@ function loginGH(){
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
-      // The email of the user's acc  ount used.
+      // The email of the user's account used.
       var email = error.email;
       // The firebase.auth.AuthCredential type that was used.
       var credential = error.credential;
-        console.log("Error - " + errorCode + "  " + errorMessage + "  " + email + "  " + credential);
+      console.log("Error - " + errorCode + "  " + errorMessage + "  " + email + "  " + credential);
     });
-
 }
+
+
+
 
 //
 // function signout(){
