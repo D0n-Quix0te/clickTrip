@@ -48,6 +48,7 @@ function loginGoogle(){
     });
 }
 
+user = firebase.auth().result.user;
 
 if (user != null) {
   user.providerData.forEach(function (profile) {
