@@ -14,11 +14,13 @@ var database = firebase.database();
 
   var provider = new firebase.auth.GoogleAuthProvider();
   var userId = "";
-
+  var name = "";
+  var email = "";
+  
 
   $("#loginbutton").on("click", function(event){
     event.preventDefault();
-    loginGH();
+    loginGoogle();
   }); // End of sign on with GitHub
 
   // $('#signOut').on("click", function(){
@@ -26,7 +28,7 @@ var database = firebase.database();
   // });
 
 //Login for Github
-function loginGH(){
+function loginGoogle(){
     firebase.auth().signInWithPopup(provider).then(function(result) {
       // This gives you a GitHub Access Token. You can use it to access the GitHub API.
       var token = result.credential.accessToken;
@@ -46,12 +48,6 @@ function loginGH(){
     });
 
 }
-
-firebase.auth().onAuthStateChanged(user => {
-  if(user) {
-    window.location = 'index2.html'; //After successful login, user will be redirected to home.html
-  }
-});
 
 //
 // function signout(){
