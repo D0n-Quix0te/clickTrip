@@ -20,7 +20,7 @@ var email = "";
 
 $("#loginbutton").on("click", function(event){
     event.preventDefault();
-    loginGoogle();
+    loginGoogle(event);
   }); 
 
 $('#signOut').on("click", function(){
@@ -33,7 +33,7 @@ function loginGoogle(){
       // This gives you a Google Access Token. You can use it to access the Google API.
       var token = result.credential.accessToken;
       // The signed-in user info.
-      user = result.user;
+      var user = result.user;
       console.log(user);
 
     }).catch(function(error) {
@@ -47,8 +47,14 @@ function loginGoogle(){
       console.log("Error - " + errorCode + "  " + errorMessage + "  " + email + "  " + credential);
     });
 }
-
-user = firebase.auth().result.user;
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+  } else {
+    // No user is signed in.
+  }
+})
+ var user = firebase.auth().result.currentUser;
 
 if (user != null) {
   user.providerData.forEach(function (profile) {
