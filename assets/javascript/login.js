@@ -12,18 +12,18 @@ firebase.initializeApp(config);
 
 var database = firebase.database();
 
-  var provider = new firebase.auth.GoogleAuthProvider();
-  var userId = "";
-  var name = "";
-  var email = "";
+var provider = new firebase.auth.GoogleAuthProvider();
+var userId = "";
+var name = "";
+var email = "";
 
 
-  $("#loginbutton").on("click", function(event){
+$("#loginbutton").on("click", function(event){
     event.preventDefault();
     loginGoogle();
   }); 
 
-  $('#signOut').on("click", function(){
+$('#signOut').on("click", function(){
     signout();
   });
 
@@ -48,3 +48,15 @@ function loginGoogle(){
     });
 }
 
+
+var user = firebase.auth().currentUser;
+
+if (user != null) {
+  user.providerData.forEach(function (profile) {
+    console.log("Sign-in provider: "+profile.providerId);
+    console.log("  Provider-specific UID: "+profile.uid);
+    console.log("  Name: "+profile.displayName);
+    console.log("  Email: "+profile.email);
+    console.log("  Photo URL: "+profile.photoURL);
+  });
+}
