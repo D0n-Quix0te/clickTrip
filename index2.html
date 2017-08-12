@@ -3,13 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
+	
+	 
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Lobster|Poppins|Righteous|Sedgwick+Ave" rel="stylesheet">
 	<!-- Our CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
     
@@ -39,12 +40,17 @@
         					<li><a href="#"> About </a></li>
         					<li class="dropdown">
           						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Tips <span class="caret"></span></a>
-          					<li><a id="upload-Button-Initial" href=""> Upload </a></li>
-          					<!-- <li class="dropdown">
-          						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></a>
-                            </li> -->
-
-
+          					<li><a id="upload-Button-Initial" href=""> Upload </a></li>         					 
+                            	<div class="dropdown">
+                            		<button class="btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> User's Name <span class="caret"></span></button>
+                            			<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                            				<li role="presentation"><a role="menuitem" tabindex="-1" href="#"> Profile </a></li>
+                            				<li role="presentation"><a role="menuitem" tabindex="-1" href="#"> Logout </a></li>
+                            			</ul>
+                        		</div>
+                        </ul>                   		
+					</div>
+			</div>
         </nav>
         <div class="row" id="userInput">
         	<div class="col-lg-4">
@@ -57,7 +63,7 @@
 			<div class="col-lg-4">
 				<form>
 					<div class="form-group">
-    					<input type="text" class="form-control" id="country" 		aria-describedby="country-Input" placeholder="Country">
+    					<input type="text" class="form-control" id="country" aria-describedby="country-Input" placeholder="Country">
     				</div>
     			</form>
     		</div>
