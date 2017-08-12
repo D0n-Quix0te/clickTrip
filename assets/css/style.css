@@ -86,6 +86,24 @@
 	background-size: cover;
 	height: 350px;
 }
+.Philippines {
+	background-image: url("../images/PHTaalVolcano.jpg");
+	background-position: center;
+	background-size: cover;
+	height: 350px;
+}
+.Amsterdam {
+	background-image: url("../images/NLAmsterdamCanalScape2.jpg");
+	background-position: center;
+	background-size: cover;
+	height: 350px;
+}
+.Groningen {
+	background-image: url("../images/NLGroningenColors1Smaller.jpg");
+	background-position: center;
+	background-size: cover;
+	height: 350px;
+}
 .about {
 	height: 795px;
 }
