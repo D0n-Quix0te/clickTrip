@@ -1,17 +1,33 @@
 
-  var provider = new firebase.auth.GoogleAuthProvider();
+  // Initialize Firebase
+var config = {
+  apiKey: "AIzaSyCRSaq9IDjSHw50sM_9fMbgD2jR74DarUA",
+  authDomain: "cliptrip-24402.firebaseapp.com",
+  databaseURL: "https://cliptrip-24402.firebaseio.com",
+  projectId: "cliptrip-24402",
+  storageBucket: "cliptrip-24402.appspot.com",
+  messagingSenderId: "401198821400"
+};
+
+firebase.initializeApp(config);
 
 
+var database = firebase.database();
 
+
+var provider = new firebase.auth.GoogleAuthProvider();
 
   $("#loginbutton").on("click", function(event){
     event.preventDefault();
     loginGoogle();
   }); 
 
+
   $('#signOut').on("click", function(){
     signout();
   });
+
+
 
 //Login for Google
 function loginGoogle(){
@@ -35,46 +51,27 @@ function loginGoogle(){
 }
 
 
-//
-// function signout(){
-//       firebase.auth().signOut().then(function() {
-//       // Sign-out successful.
-//       console.log("Bye");
-//       $('html').removeClass('logged-in');
-//       sessionStorage.removeItem("userKey");
-//       sessionStorage.clear();
-//
-//       // $("#signInWithGithub").css('visibility', 'visible');
-//       // $("#signInWithGithub").show();
-//       // $("#signOut").hide();
-//       // $(".save-wrap").css('visibility', 'hidden');
-//       // $("#displayJobs").css('visibility', 'hidden');
-//
-//     }).catch(function(error) {
-//       // An error happened.
-//     });
-// }
-//
-// function initApp() {
-//   // Listening for auth state changes.
-//   // [START authstatelistener]
-//   firebase.auth().onAuthStateChanged(function(user) {
-//     // [START_EXCLUDE silent]
-//     // [END_EXCLUDE]
-//     console.log("Attempted Sign in");
-//     console.log(user);
-//     if (user) {
-//       // User is signed in.
-//
-//       var uid = user.uid;
-//       // window.location = '/saved-jobs.html';
-//       console.log(uid);
-//     }
-//   });
-//   // [END authstatelistener]
-//
-// } // [END initApp()]
-//
-// window.onload = function() {
-//   initApp();
-// };
+
+var user = firebase.auth().currentUser;
+
+if (user != null) {
+  user.providerData.forEach(function (profile) {
+    console.log("Sign-in provider: "+profile.providerId);
+    console.log("  Provider-specific UID: "+profile.uid);
+    console.log("  Name: "+profile.displayName);
+    console.log("  Email: "+profile.email);
+    console.log("  Photo URL: "+profile.photoURL);
+  });
+}
+
+
+// // Register the callback to be fired every time auth state changes
+// ref.onAuth(function(authData) {
+//   if (authData) {
+//     console.log("User " + authData.uid + " is logged in with " + authData.provider);
+//   } else {
+//     console.log("User is logged out");
+//   }
+// });
+
+
