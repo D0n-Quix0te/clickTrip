@@ -1,6 +1,16 @@
 
   var provider = new firebase.auth.GoogleAuthProvider();
 
+// Register the callback to be fired every time auth state changes
+ref.onAuth(function(authData) {
+  if (authData) {
+    console.log("User " + authData.uid + " is logged in with " + authData.provider);
+  } else {
+    console.log("User is logged out");
+  }
+});
+
+
 
   $("#loginbutton").on("click", function(event){
     event.preventDefault();
@@ -31,8 +41,6 @@ function loginGoogle(){
       console.log("Error - " + errorCode + "  " + errorMessage + "  " + email + "  " + credential);
     });
 }
-
-
 
 
 //
