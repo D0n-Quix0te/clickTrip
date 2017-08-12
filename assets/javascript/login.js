@@ -48,6 +48,7 @@ function loginGoogle(){
     });
 }
 
+<<<<<<< HEAD
 
 
 
@@ -94,3 +95,5 @@ function loginGoogle(){
 // window.onload = function() {
 //   initApp();
 // };
+=======
+>>>>>>> 9a6027df484715dbb5730a9f6323588b78feebd3
