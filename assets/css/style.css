@@ -40,7 +40,7 @@
 }
 .background2 {
 	background-image: url("../images/CNEveWL1.jpg");
-	background-size: cover;
+	background-size: fill;
 }
 .panel {
 	margin-bottom: 0px;
