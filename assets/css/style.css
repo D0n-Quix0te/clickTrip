@@ -160,6 +160,20 @@
   	-webkit-background-clip: text;
   	-webkit-text-fill-color: transparent;
 }
+#navbarbullshit {
+	float: left;
+	position: relative;
+	
+	left: 40px;
+	letter-spacing: 2px;
+}
+.navbar {
+	height: 80px;
+}
+.navbar-body {
+	position: relative;
+	top: -50px;
+}
 input {
 	border-radius: 10px;
 	text-align: center;
