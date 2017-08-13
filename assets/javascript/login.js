@@ -111,19 +111,39 @@ $("#upload-Button").on("click", function(event) {
   var storage = firebase.storage();
 
   // Get a reference to the upload location from Firebase storage bucket //
-  var timestamp = Number(new Date());
+  var timestamp = Number(new Date(title));
 
   var city = $("#city-Input").val().trim();
   var country = $("#country-Input").val().trim();
+  var title = $("title-Input").val();
   var photoLocation = $(city + country);
-  var title = $("title-Input").val().trim();
+  
 
   // Create a storage reference from our storage service
-  var storageRef = firebase.storage().ref(title.toString());
+  var storageRef = firebase.storage().ref(timestamp.toString());
 
   // Grab button ID and adds content to file_data //
   var file_data = $("#photo-Upload").prop('files')[0];
 
   storageRef.put(file_data);
-})
+
+  showImage()
+});
+
+function showImage() {
+  var storageRef = firebase.storage().ref();
+  var spaceRef = storageRef.child("images/1502646473076.jpg");
+  storageRef.child("1502646473076.jpg").getDownloadURL().then(function(url) {
+    console.log('Got Download URL');
+    var test = url;
+    alert(url);
+    document.querySelector('img').src = test;
+  }).catch(function(error) {
+
+  });
+}
+
+
+
+
 
