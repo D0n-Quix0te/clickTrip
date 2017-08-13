@@ -12,87 +12,80 @@ firebase.initializeApp(config);
 
 var database = firebase.database();
 
-  var provider = new firebase.auth.GoogleAuthProvider();
-  var userId = "";
+var provider = new firebase.auth.GoogleAuthProvider();
+var userId = "";
+var name = "";
+var email = "";
 
 
-  $("#loginbutton").on("click", function(event){
+$("#loginbutton").on("click", function(event){
     event.preventDefault();
-    loginGH();
-  }); // End of sign on with GitHub
+    loginGoogle(event);
+  }); 
 
-  // $('#signOut').on("click", function(){
-  //   signout();
-  // });
+$('#logout-Button').on("click", function(){
+    logout();
+  });
 
-//Login for Github
-function loginGH(){
+// Logout Function //
+function logout() {
+  firebase.auth().signOut().then(function() {
+  // Sign-out successful.
+  alert("You Are Now Logged Out");
+}).catch(function(error) {
+  // An error happened.
+  alert("Ooops, Shit Happens & You Didn't Get Logged Out");
+});
+// Redirect back to landing page //
+window.location = 'index.html';
+
+}
+
+//Login for Google
+function loginGoogle(){
     firebase.auth().signInWithPopup(provider).then(function(result) {
-      // This gives you a GitHub Access Token. You can use it to access the GitHub API.
+      // This gives you a Google Access Token. You can use it to access the Google API.
       var token = result.credential.accessToken;
       // The signed-in user info.
-      user = result.user;
-
+      var user = result.user;
+      console.log(user);
 
     }).catch(function(error) {
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
-      // The email of the user's acc  ount used.
+      // The email of the user's account used.
       var email = error.email;
       // The firebase.auth.AuthCredential type that was used.
       var credential = error.credential;
-        console.log("Error - " + errorCode + "  " + errorMessage + "  " + email + "  " + credential);
+      console.log("Error - " + errorCode + "  " + errorMessage + "  " + email + "  " + credential);
     });
-
-}
-
-firebase.auth().onAuthStateChanged(user => {
-  if(user) {
-    window.location = 'index2.html'; //After successful login, user will be redirected to home.html
-  }
+    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // ...
 });
 
-//
-// function signout(){
-//       firebase.auth().signOut().then(function() {
-//       // Sign-out successful.
-//       console.log("Bye");
-//       $('html').removeClass('logged-in');
-//       sessionStorage.removeItem("userKey");
-//       sessionStorage.clear();
-//
-//       // $("#signInWithGithub").css('visibility', 'visible');
-//       // $("#signInWithGithub").show();
-//       // $("#signOut").hide();
-//       // $(".save-wrap").css('visibility', 'hidden');
-//       // $("#displayJobs").css('visibility', 'hidden');
-//
-//     }).catch(function(error) {
-//       // An error happened.
-//     });
-// }
-//
-// function initApp() {
-//   // Listening for auth state changes.
-//   // [START authstatelistener]
-//   firebase.auth().onAuthStateChanged(function(user) {
-//     // [START_EXCLUDE silent]
-//     // [END_EXCLUDE]
-//     console.log("Attempted Sign in");
-//     console.log(user);
-//     if (user) {
-//       // User is signed in.
-//
-//       var uid = user.uid;
-//       // window.location = '/saved-jobs.html';
-//       console.log(uid);
-//     }
-//   });
-//   // [END authstatelistener]
-//
-// } // [END initApp()]
-//
-// window.onload = function() {
-//   initApp();
-// };
+
+}
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+  } else {
+    // No user is signed in.
+  }
+})
+ var user = firebase.auth().result.user;
+
+if (user != null) {
+  user.providerData.forEach(function (profile) {
+    console.log("Sign-in provider: " + profile.providerId);
+    console.log("  Provider-specific UID: " + profile.uid);
+    console.log("  Name: " + profile.displayName);
+    console.log("  Email: " + profile.email);
+    console.log("  Photo URL: " + profile.photoURL);
+  });
+}
+
+

@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Lobster|Poppins|Righteous|Sedgwick+Ave" rel="stylesheet">
-
+	<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
 	<title>clickTrip</title>
 </head>
 <body class="background">
@@ -20,8 +20,8 @@
 					<br>
 						<hr>
 								<input type='text' data-provide="typeahead" data-items="4" placeholder='Explore...' id='search-text-input' class="search-query">
-							<div class="dropdown">
-								<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" value="login" type="button" id="loginbutton">  Login  <span class="caret"></span></button>
+							<div class="login-button">
+								<button class="btn btn-default" value="login" type="button" id="loginbutton">  Login  </button>
 				</div>
 			</div>
 		</div>
@@ -30,14 +30,11 @@
 
 
 
-
-
-
-
-<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="assets/javascript/java.js"></script>
+
 <script type="text/javascript" src="assets/javascript/login.js"></script>
+<script type="text/javascript" src="assets/javascript/java.js"></script>
+<script type="text/javascript" src="assets/javascript/pageOneRedirect.js"></script>
 
 </body>
 </html>

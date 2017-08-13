@@ -3,44 +3,50 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
+	
+	 
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Lobster|Poppins|Righteous|Sedgwick+Ave" rel="stylesheet">
 	<!-- Our CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<<<<<<< HEAD
 
+=======
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+>>>>>>> 707be8225c8d44c8181dfb57236162333e98dd62
 	<!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
     
     
     <title>clickTrip</title>
 </head>
+
+
 <body class="background2">
 	<div class="container secondary">
 		<nav class="navbar navbar-default">
 			<div class="navbar-header">
-      			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        				<span class="sr-only">Toggle navigation</span>
+      			<!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> -->
+        				<!-- <span class="sr-only">Toggle navigation</span>
         				<span class="icon-bar"></span>
         				<span class="icon-bar"></span>
-        				<span class="icon-bar"></span>
-      			</button>
-      				<a class="navbar-brand" href="index.html">
-      					<img id="logo" alt="click_Trip_Logo" src="assets/images/clickTripLogo.png">
-      				</a>
+        				<span class="icon-bar"></span> -->
+      			<!-- </button> -->
+      				<a class="navbar-brand" href="index.html"><img id="logo" alt="click_Trip_Logo" src="assets/images/clickTripLogo.png"></a>
     		</div>
-    		<div class="navbar navbar-body">
-    				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    		<div class="navbar navbar-body navbar-right">
+    				<div class="collapse navbar-collapse" id="navbarbullshit">
       					<ul class="nav navbar-nav">
-        					<li class="active"><a href="#"> Contact <span class="sr-only">(current)</span></a></li>
+        					<li class="button"><a href="#"> Contact <span class="sr-only">(current)</span></a></li>
         					<li><a href="#"> About </a></li>
         					<li class="dropdown">
           						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Tips <span class="caret"></span></a>
-          					<li><a id="upload-Button-Initial" href=""> Upload </a></li>
-          					<li class="dropdown">
-          						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">  <span class="caret"></span></a>
-          				</ul>
+          					<li><a id="upload-Button-Initial" href=""> Upload </a></li>         					 
+                            <li><a id="logout-Button" href=""> Logout </a></li>	
+                        </ul>                   		
+					</div>
+			</div>
         </nav>
         <div class="row" id="userInput">
         	<div class="col-lg-4">
@@ -53,12 +59,14 @@
 			<div class="col-lg-4">
 				<form>
 					<div class="form-group">
-    					<input type="text" class="form-control" id="country" 		aria-describedby="country-Input" placeholder="Country">
+    					<input type="text" class="form-control" id="country" aria-describedby="country-Input" placeholder="Country">
     				</div>
     			</form>
     		</div>
   			<div class="col-lg-4">
-  				<button class="upload-Button" type="button">Upload</button>
+  				<input class="upload-Button" type="file" name="img">
+  				<br>
+  				<button id="upload-Button" type="button"> Upload </button>
   			</div>
   		</div>
         <div class="row initial">
@@ -75,34 +83,88 @@
         						</div>
         						</div>
         					</div>
+        					<div class="back">
+        						<div class="panel panel-default">
+        							<div class="panel panel-header">
+        								Athens
+        							</div>
+        							<div class="panel panel-body Athens">
+        							</div>
+        						</div>
+        					</div>
         				</div>
         			</div>
         			<br>
-        			<div class="panel panel-default">
-        				<div class="panel panel-header">
-        					Kyoto
-        				</div>
-        					<div class="panel panel-body Kyoto">
+        			<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+        				<div class="flipper">
+        					<div class="front">
+        						<div class="panel panel-default">
+        							<div class="panel panel-header">
+        								Kyoto
+        							</div>
+        							<div class="panel panel-body Kyoto">
+        							</div>
+        						</div>
         					</div>
+        					<div class="back">
+        						<div class="panel panel-default">
+        							<div class="panel panel-header">
+        								Amsterdam
+        							</div>
+        							<div class="panel panel-body Amsterdam">
+        							</div>
+        						</div>
+        					</div>
+        				</div>
         			</div>
         		</div>
         		<div class="col-lg-4">
-        			<div class="panel panel-default">
-        				<div class="panel panel-header">
-        					Hong Kong
-        				</div>
-        				<div class="panel panel-body HK">
+        			<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+  						<div class="flipper">
+    						<div class="front">
+        						<div class="panel panel-default">
+        							<div class="panel panel-header">
+        								Hong Kong
+        							</div>
+        						<div class="panel panel-body HK">
+        						</div>
+        					</div>
+        					</div>
+        					<div class="back">
+        						<div class="panel panel-default">
+        							<div class="panel panel-header">
+        								Philippines
+        							</div>
+        							<div class="panel panel-body Philippines">
+        							</div>
+        						</div>
+        					</div>       				
         				</div>
         			</div>
         			<br>
-        			<div class="panel panel-default">
-        				<div class="panel panel-header">
-        					Kansas City
+        			<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+  						<div class="flipper">
+    						<div class="front">
+        						<div class="panel panel-default">
+        							<div class="panel panel-header">
+        								Kansas City
+        							</div>
+        							<div class="panel panel-body KC">
+        							</div>
+        						</div>	
+        					</div>
+        					<div class="back">
+        						<div class="panel panel-default">
+        							<div class="panel panel-header">
+        								Groningen
+        							</div>
+        							<div class="panel panel-body Groningen">
+        							</div>
+        						</div>
+        					</div>
         				</div>
-        				<div class="panel panel-body KC">
-        				</div>
-        			</div>	
-        		</div>
+        			</div>
+				</div>
         		<div class="col-lg-4">
         			<div class="panel panel-default cityinfo">
                        
@@ -113,15 +175,13 @@
                         </div>
                         <div class="panel panel-body">
                             <ul class="personal-info">
-                                <li> Name: </li>
+                                <li id="name-display"> Name: </li>
+                                <li id="email"> E-mail: </li>
                                 <li> Location: </li>
                                 <li> Countries Visited: </li>
                                 <li> About Me: </li>
                             </ul>
-                            <div class="photo-id">
-                                <img class="thumbnail" src="thumbnail" alt="your_photo">
-   
-						</div>
+
 					</div>
         		</div>
         	</div>
@@ -130,13 +190,20 @@
 
 
 
-
-
-
-<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="assets/javascript/java.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-messaging.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-storage.js"></script>
 <script type="text/javascript" src="assets/javascript/login.js"></script>
+
+<script type="text/javascript" src="assets/javascript/java.js"></script>
+
+
+
+
 
 </body>
 </html>	
