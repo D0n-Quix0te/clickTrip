@@ -2,9 +2,7 @@
         height: 400px;
         width: 100%;
 }
-.nav {
-
-}   
+  
 
 .container{
 	margin: 0px;
@@ -54,87 +52,102 @@
 	margin-bottom: 0px;
 	border-radius: 2px;
 }
+.panel-body {
+	margin-bottom: 0px !important;
+}
 .panel-header {
 	color: #d9d9d9;
 	font-size: 24px;
 	font-family: 'Lobster', cursive;
 	-webkit-text-stroke: .25px black;
 	background: -webkit-linear-gradient(#700, #135);
-	border: 1px solid #d9d9d9;
+	/*border: 1px solid #d9d9d9;*/
 	letter-spacing: 1.4px;
+	margin-bottom: 0px !important;
 }
 .Berlin {
 	background-image: url("../images/BerlinShellHaus.jpg");
 	background-position: center;
 	background-size: cover;
 	height: 350px;
+	border-top: 2px solid #d9d9d9;
 }
 .Kyoto {
 	background-image: url("../images/Kyoto-shiShrineRV.jpg");
 	background-position: center;
 	background-size: cover;
 	height: 350px;
-	margin-top: 0px;
+	border-top: 2px solid #d9d9d9;
 }
 .KC {
 	background-image: url("../images/KSKCSymphonyBW.jpg");
 	background-position: center;
 	background-size: cover;
 	height: 350px;
+	border-top: 2px solid #d9d9d9;
 }
 .HK {
 	background-image: url("../images/CNHKTheLight6.jpg");
 	background-position: center;
 	background-size: cover;
 	height: 350px;
+	border-top: 2px solid #d9d9d9;
 }
 .Athens {
 	background-image: url("../images/AthensNightViewRV.jpg");
 	background-position: center;
 	background-size: cover;
 	height: 350px;
+	border-top: 2px solid #d9d9d9;
 }
 .Philippines {
 	background-image: url("../images/PHTaalVolcano.jpg");
 	background-position: center;
 	background-size: cover;
 	height: 350px;
+	border-top: 2px solid #d9d9d9;
 }
 .Amsterdam {
 	background-image: url("../images/NLAmsterdamCanalScape2.jpg");
 	background-position: center;
 	background-size: cover;
 	height: 350px;
+	border-top: 2px solid #d9d9d9;
 }
 .Groningen {
 	background-image: url("../images/NLGroningenColors1Smaller.jpg");
 	background-position: center;
 	background-size: cover;
 	height: 350px;
+	border-top: 2px solid #d9d9d9;
 }
 .Wuzhen {
 	background-image: url("../images/CNColorfulLanterns.jpg");
 	background-position: center;
 	background-size: cover;
 	height: 350px;
+	border-top: 2px solid #d9d9d9;
 }
 .Venice {
 	background-image: url("../images/VeneziaColorsReEdit.jpg");
 	background-position: center;
 	background-size: cover;
 	height: 350px;
+	border-top: 2px solid #d9d9d9;
 }
 .Zhangjiajie {
 	background-image: url("../images/CNZhangjiajie2.jpg");
 	background-position: center;
 	background-size: cover;
 	height: 350px;
+	border-top: 2px solid #d9d9d9;
 }
 .LosAngeles {
 	background-image: url("../images/CAWDCHRevisitDiffAngle1.jpg");
 	background-position: center;
 	background-size: cover;
 	height: 350px;
+	border-top: 2px solid #d9d9d9;
 }
 .about {
 	height: 795px;
@@ -268,7 +281,11 @@ ul {
 	text-align: left;
 	font-family: 'Lobster', cursive;
 	font-size: 20px;
+	-webkit-text-stroke: 1px #700 !important;
 	
+}
+.nav {
+	-webkit-text-stroke: 1px #700 !important;
 }
 .navbar {
 	width: 100%;
@@ -299,16 +316,16 @@ ul {
 goes here */
 
 .flipper {
-  -webkit-transition: 0.6s;
+  -webkit-transition: 0.45s;
 	-webkit-transform-style: preserve-3d;
 
-	-moz-transition: 0.6s;
+	-moz-transition: 0.45s;
 	-moz-transform-style: preserve-3d;
   
-  -o-transition: 0.6s;
+  -o-transition: 0.45s;
 	-o-transform-style: preserve-3d;
 
-	transition: 0.6s;
+	transition: 0.45s;
 	transform-style: preserve-3d;
   
   position: relative;
