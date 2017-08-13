@@ -46,24 +46,31 @@
 			</div>
         </nav>
         <div class="row" id="userInput">
-        	<div class="col-lg-4">
+        	<div class="col-lg-2">
         		<form>
   					<div class="form-group">   
     					<input type="text" class="form-control" id="city-Input" aria-describedby="emailHelp" placeholder="City">
     					</div>
     			</form>
     		</div>   				
-			<div class="col-lg-4">
+			<div class="col-lg-2">
 				<form>
 					<div class="form-group">
-    					<input type="text" class="form-control" id="country" aria-describedby="country-Input" placeholder="Country">
+    					<input type="text" class="form-control" id="country-Input" aria-describedby="country-Input" placeholder="Country">
+    				</div>
+    			</form>
+    		</div>
+    		<div class="col-lg-2">
+				<form>
+					<div class="form-group">
+    					<input type="text" class="form-control" id="title-Input" aria-describedby="title-Input" placeholder="Title">
     				</div>
     			</form>
     		</div>
   			<div class="col-lg-4">
-  				<input class="upload-Button" type="file" name="img">
-  				<br>
-  				<button id="upload-Button" type="button"> Upload </button>
+  				<label for="icon"> </label>
+  				<input accept=".jpg, .jpeg, .png" type="file" id="photo-Upload" name="icon">
+  				<button type="submit" id="upload-Button"> Upload Photo </button>
   			</div>
   		</div>
         <div class="row initial">
@@ -200,7 +207,7 @@
         					</div>
         					<div class="back">
         						<div class="panel panel-default">
-        							<div class="panel panel-header Wuzhen">
+        							<div class="panel panel-header">
         								Wuzhen
         							</div>
         							<div class="panel panel-body Wuzhen">
@@ -241,7 +248,7 @@
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+
 <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-database.js"></script>
@@ -250,6 +257,7 @@
 <script type="text/javascript" src="assets/javascript/login.js"></script>
 
 <script type="text/javascript" src="assets/javascript/java.js"></script>
+<!-- <script type="text/javascript" src="assets/javascript/firebase.js"></script> -->
 
 
 

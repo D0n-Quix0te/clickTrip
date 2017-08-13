@@ -10,6 +10,8 @@ var config = {
 
 firebase.initializeApp(config);
 
+
+
 var database = firebase.database();
 
 var provider = new firebase.auth.GoogleAuthProvider();
@@ -17,10 +19,24 @@ var userId = "";
 var name = "";
 var email = "";
 
+ var user = firebase.auth().currentUser;
+
+// var user = firebase.auth().currentUser;
+
+//   user.updateProfile({
+//   displayName: " ",
+//   photoURL: "../images/photographer-silhouettes.jpg"
+//   }).then(function() {
+//   // Update Successful.
+//   }).catch(function(error) {
+//   // An error happened.
+//   });
+
+provider.addScope('https://www.googleapis.com/auth/admin.directory.customer.readonly');
 
 $("#loginbutton").on("click", function(event){
     event.preventDefault();
-    loginGoogle(event);
+    loginGoogle();
   }); 
 
 $('#logout-Button').on("click", function(){
@@ -76,7 +92,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     // No user is signed in.
   }
 })
- var user = firebase.auth().result.user;
+
 
 if (user != null) {
   user.providerData.forEach(function (profile) {
@@ -88,4 +104,26 @@ if (user != null) {
   });
 }
 
+$("#upload-Button").on("click", function(event) {
+  event.preventDefault();
+
+    // Get a reference to the storage service, which is used to create references in your storage bucket
+  var storage = firebase.storage();
+
+  // Get a reference to the upload location from Firebase storage bucket //
+  var timestamp = Number(new Date());
+
+  var city = $("#city-Input").val().trim();
+  var country = $("#country-Input").val().trim();
+  var photoLocation = $(city + country);
+  var title = $("title-Input").val().trim();
+
+  // Create a storage reference from our storage service
+  var storageRef = firebase.storage().ref(title.toString());
+
+  // Grab button ID and adds content to file_data //
+  var file_data = $("#photo-Upload").prop('files')[0];
+
+  storageRef.put(file_data);
+})
 
