@@ -316,16 +316,16 @@ ul {
 goes here */
 
 .flipper {
-  -webkit-transition: 0.45s;
+  -webkit-transition: 0.65s;
 	-webkit-transform-style: preserve-3d;
 
-	-moz-transition: 0.45s;
+	-moz-transition: 0.65s;
 	-moz-transform-style: preserve-3d;
   
-  -o-transition: 0.45s;
+  -o-transition: 0.65s;
 	-o-transform-style: preserve-3d;
 
-	transition: 0.45s;
+	transition: 0.65s;
 	transform-style: preserve-3d;
   
   position: relative;
