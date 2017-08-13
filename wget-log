@@ -1,17 +1,0 @@
---2017-08-12 19:45:37--  http://youtube-dl/
-Resolving youtube-dl... failed: nodename nor servname provided, or not known.
-wget: unable to resolve host address ‘youtube-dl’
---2017-08-12 19:45:37--  https://www.youtube.com/watch?v=7W48AYpkdkE
-Resolving www.youtube.com... 172.217.1.238
-Connecting to www.youtube.com|172.217.1.238|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: unspecified [text/html]
-Saving to: ‘watch?v=7W48AYpkdkE’
-
-watch?v=7W48AYpkdkE     [<=>                 ]       0  --.-KB/s               watch?v=7W48AYpkdkE     [ <=>                ]   6.74K  23.9KB/s               watch?v=7W48AYpkdkE     [  <=>               ]  71.36K   131KB/s               watch?v=7W48AYpkdkE     [   <=>              ] 172.10K   292KB/s    in 0.6s    
-
-2017-08-12 19:45:38 (292 KB/s) - ‘watch?v=7W48AYpkdkE’ saved [176230]
-
-FINISHED --2017-08-12 19:45:38--
-Total wall clock time: 1.0s
-Downloaded: 1 files, 172K in 0.6s (292 KB/s)
