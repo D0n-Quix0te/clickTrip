@@ -37,7 +37,7 @@ function logout() {
   alert("Ooops, Shit Happens & You Didn't Get Logged Out");
 });
 // Redirect back to landing page //
-window.location = "index.html";
+window.location = 'index.html';
 
 }
 
