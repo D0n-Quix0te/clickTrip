@@ -23,9 +23,23 @@ $("#loginbutton").on("click", function(event){
     loginGoogle(event);
   }); 
 
-$('#signOut').on("click", function(){
-    signout();
+$('#logout-Button').on("click", function(){
+    logout();
   });
+
+// Logout Function //
+function logout() {
+  firebase.auth().signOut().then(function() {
+  // Sign-out successful.
+  alert("You Are Now Logged Out");
+}).catch(function(error) {
+  // An error happened.
+  alert("Ooops, Shit Happens & You Didn't Get Logged Out");
+});
+// Redirect back to landing page //
+window.location = "index.html";
+
+}
 
 //Login for Google
 function loginGoogle(){
@@ -46,6 +60,14 @@ function loginGoogle(){
       var credential = error.credential;
       console.log("Error - " + errorCode + "  " + errorMessage + "  " + email + "  " + credential);
     });
+    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // ...
+});
+
+
 }
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
@@ -54,7 +76,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     // No user is signed in.
   }
 })
- var user = firebase.auth().result.currentUser;
+ var user = firebase.auth().result.user;
 
 if (user != null) {
   user.providerData.forEach(function (profile) {
