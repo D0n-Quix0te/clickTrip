@@ -61,6 +61,7 @@
 	-webkit-text-stroke: .25px black;
 	background: -webkit-linear-gradient(#700, #135);
 	border: 1px solid #d9d9d9;
+	letter-spacing: 1.4px;
 }
 .Berlin {
 	background-image: url("../images/BerlinShellHaus.jpg");
@@ -83,8 +84,6 @@
 }
 .HK {
 	background-image: url("../images/CNHKTheLight6.jpg");
-<<<<<<< HEAD
-=======
 	background-position: center;
 	background-size: cover;
 	height: 350px;
@@ -109,7 +108,30 @@
 }
 .Groningen {
 	background-image: url("../images/NLGroningenColors1Smaller.jpg");
->>>>>>> 707be8225c8d44c8181dfb57236162333e98dd62
+	background-position: center;
+	background-size: cover;
+	height: 350px;
+}
+.Wuzhen {
+	background-image: url("../images/CNColorfulLanterns.jpg");
+	background-position: center;
+	background-size: cover;
+	height: 350px;
+}
+.Venice {
+	background-image: url("../images/VeneziaColorsReEdit.jpg");
+	background-position: center;
+	background-size: cover;
+	height: 350px;
+}
+.Zhangjiajie {
+	background-image: url("../images/CNZhangjiajie2.jpg");
+	background-position: center;
+	background-size: cover;
+	height: 350px;
+}
+.LosAngeles {
+	background-image: url("../images/CAWDCHRevisitDiffAngle1.jpg");
 	background-position: center;
 	background-size: cover;
 	height: 350px;

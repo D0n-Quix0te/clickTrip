@@ -32,12 +32,12 @@ function logout() {
   firebase.auth().signOut().then(function() {
   // Sign-out successful.
   alert("You Are Now Logged Out");
-}).catch(function(error) {
+  }).catch(function(error) {
   // An error happened.
   alert("Ooops, Shit Happens & You Didn't Get Logged Out");
-});
-// Redirect back to landing page //
-window.location = 'index.html';
+  });
+  // Redirect back to landing page //
+  window.location = 'index.html';
 
 }
 

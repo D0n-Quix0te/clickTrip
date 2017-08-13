@@ -36,6 +36,28 @@ if (user != null) {
   });
 }
 
+// Gets current username ///
+var user = firebase.auth().currentUser;
+
+// Create a storage ref w/ username //
+var storageRef = firebase.storage().ref(user + '/profilePicture/' + file.name);
+
+// Upload file //
+var task = storageRef.put(file);
+
+service firebase.storage {
+  match /b/<your-firebase-storage-bucket>/o {
+    match /{userId}/profilePicture/{fileName} {
+      // Anyone can read
+      allow read;
+      // Only the user can upload their own profile picture
+      // Profile picture must be of content-type "image/*"
+      allow write: if request.auth.uid == userId
+                   && request.resource.contentType.matches('image/.+');
+    }
+  }
+}
+
 $("#upload-Button").on("click", function(event) {
   event.preventDefault();
 
