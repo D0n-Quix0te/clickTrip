@@ -124,18 +124,19 @@ $("#upload-Button").on("click", function(event) {
   };
   console.log(addPhoto);
 
-  database.ref().push({
-    city: city,
-    country: country,
-    title: title,
-    photoLocation: photoLocation,
-    dateAdded: firebase.database.ServerValue.TIMESTAMP,
-  });
+  // database.ref().push({
+  //   city: city,
+  //   country: country,
+  //   title: title,
+  //   photoLocation: photoLocation,
+  //   dateAdded: firebase.database.ServerValue.TIMESTAMP,
+  // });
 
   
 
   // Log these to the console //
   console.log(city);
+  console.log(state);
   console.log(country);
   console.log(title);
   console.log(photoLocation);
