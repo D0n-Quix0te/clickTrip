@@ -8,19 +8,14 @@ var config = {
   messagingSenderId: "401198821400"
 };
 
-firebase.initializeApp(config);
+  firebase.initializeApp(config);
 
+  var database = firebase.database();
 
-
-var database = firebase.database();
-
-var provider = new firebase.auth.GoogleAuthProvider();
-var userId = "";
-var name = "";
-var email = "";
-// var user;
-// var selectedFile;
-
+  var provider = new firebase.auth.GoogleAuthProvider();
+  var userId = "";
+  var name = "";
+  var email = "";
 
  var user = firebase.auth().currentUser;
 
@@ -35,19 +30,19 @@ var email = "";
 //   // An error happened.
 //   });
 
-provider.addScope('https://www.googleapis.com/auth/admin.directory.customer.readonly');
+  provider.addScope('https://www.googleapis.com/auth/admin.directory.customer.readonly');
 
-$("#loginbutton").on("click", function(event){
+    $("#loginbutton").on("click", function(event){
     event.preventDefault();
     loginGoogle();
   }); 
 
-$('#logout-Button').on("click", function(){
+    $('#logout-Button').on("click", function(){
     logout();
   });
 
-// Logout Function //
-function logout() {
+  // Logout Function //
+  function logout() {
   firebase.auth().signOut().then(function() {
   // Sign-out successful.
   alert("You Are Now Logged Out");
@@ -60,8 +55,8 @@ function logout() {
 
 }
 
-//Login for Google
-function loginGoogle(){
+  //Login for Google
+  function loginGoogle(){
     firebase.auth().signInWithPopup(provider).then(function(result) {
       // This gives you a Google Access Token. You can use it to access the Google API.
       var token = result.credential.accessToken;
@@ -118,8 +113,12 @@ $("#upload-Button").on("click", function(event) {
 
   var city = $("#city-Input").val().trim();
   var country = $("#country-Input").val().trim();
+  var state = $("#state-Input").val().trim();
   var title = $("#title-Input").val().trim();
-  var photoLocation = $(city + country);
+  var photoLocation = $(city + country) {
+    if (city.val() === true) && (state.val() === true) && (country.val() === true)
+      var photoLocation = $(city + state + country);
+  }
   var addPhoto = {
     "city": city,
     "country": country,
@@ -157,6 +156,8 @@ $("#upload-Button").on("click", function(event) {
 
 
   clear();
+
+
 });
 
 function showImage() {
