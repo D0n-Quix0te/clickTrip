@@ -115,10 +115,7 @@ $("#upload-Button").on("click", function(event) {
   var country = $("#country-Input").val().trim();
   var state = $("#state-Input").val().trim();
   var title = $("#title-Input").val().trim();
-  var photoLocation = $(city + country) {
-    if (city.val() === true) && (state.val() === true) && (country.val() === true)
-      var photoLocation = $(city + state + country);
-  }
+  var photoLocation = $(city + country); 
   var addPhoto = {
     "city": city,
     "country": country,
