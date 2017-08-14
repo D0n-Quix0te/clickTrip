@@ -16,7 +16,7 @@ var config = {
   var userId = "";
   var name = "";
   var email = "";
-
+  var categories = ["Belgium", "China", "Czech Republic", "France", "Germany", "Greece", "Italy", "Japan", "The Netherlands", "The Philippines", "The United Kingdom", "The United States"]
  var user = firebase.auth().currentUser;
 
 // var user = firebase.auth().currentUser;
@@ -30,7 +30,83 @@ var config = {
 //   // An error happened.
 //   });
 
-  provider.addScope('https://www.googleapis.com/auth/admin.directory.customer.readonly');
+  // provider.addScope('https://www.googleapis.com/auth/admin.directory.customer.readonly');
+
+
+$("#upload-Button").on("click", function(event) {
+  event.preventDefault();
+
+  
+
+  var city = $("#city-Input").val().trim();
+  var state = $("#state-Input").val().trim();
+  var country = $("#country-Input").val().trim();
+  var title = $("#title-Input").val().trim();
+  // var photoLocation = $(city + country); 
+  var addPhoto = {
+    "city": city,
+    "state": state,
+    "country": country,
+    "title": title,
+    // "photoLocation": photoLocation,
+  };
+
+  console.log(addPhoto);
+
+  database.ref().push({
+    city: city,
+    country: country,
+    title: title,
+    // photoLocation: photoLocation,
+    dateAdded: firebase.database.ServerValue.TIMESTAMP,
+
+  });
+
+  // var fileButton = document.getElementById("photo-Upload");
+  //             fileButton.addEventListener('change', function(e){
+  //                 var file = e.target.files[0];
+  //                 var storageRef = firebase.storage().ref(file.name);
+  //                 storageRef.put(file.name);
+  //             }); 
+     // Get a reference to the storage service, which is used to create references in your storage bucket
+  var storage = firebase.storage();
+
+  // // Get a reference to the upload location from Firebase storage bucket //
+  var locationInformation = Number(new Date());
+
+  //  // Create a storage reference from our storage service
+  var storageRef = firebase.storage().ref(locationInformation.toString());
+
+  // // Grab button ID and adds content to file_data //
+  var file_data = $("#photo-Upload").prop('files')[0];
+
+  storageRef.put(file_data);
+
+  console.log(file_data);
+
+  
+
+  // Log these to the console //
+  console.log(city);
+  console.log(state);
+  console.log(country);
+  console.log(title);
+  // console.log(photoLocation);
+  
+  // database.storageRef.ref().on("child_added", function(childSnapshot) {
+
+  //   console.log(childSnapshot.val().city);
+  //   console.log(childSnapshot.val().state);
+  //   console.log(childSnapshot.val().country);
+  //   console.log(childSnapshot.val().title);
+  // })
+ 
+
+
+
+
+  });
+
 
     $("#loginbutton").on("click", function(event){
     event.preventDefault();
@@ -103,67 +179,6 @@ if (user != null) {
     console.log("  Photo URL: " + profile.photoURL);
   });
 }
-
-$("#upload-Button").on("click", function(event) {
-  event.preventDefault();
-
-  var city = $("#city-Input").val().trim();
-  var state = $("#state-Input").val().trim();
-  var country = $("#country-Input").val().trim();
-  var title = $("#title-Input").val().trim();
-  var photoLocation = $(city + country); 
-  var addPhoto = {
-    "city": city,
-    "state": state,
-    "country": country,
-    "title": title,
-    "photoLocation": photoLocation,
-  };
-     // Get a reference to the storage service, which is used to create references in your storage bucket
-  var storage = firebase.storage();
-
-  // Get a reference to the upload location from Firebase storage bucket //
-  var locationInformation = addPhoto;
-
-   // Create a storage reference from our storage service
-  var storageRef = firebase.storage().ref(locationInformation.toString());
-
-  // Grab button ID and adds content to file_data //
-  // var file_data = $("#photo-Upload").prop('files')[0];
-
-  storageRef.put(addPhoto);
-
-  console.log(addPhoto);
-
-  // database.ref().push({
-  //   city: city,
-  //   country: country,
-  //   title: title,
-  //   photoLocation: photoLocation,
-  //   dateAdded: firebase.database.ServerValue.TIMESTAMP,
-
-  // });
-
-  // Log these to the console //
-  console.log(city);
-  console.log(state);
-  console.log(country);
-  console.log(title);
-  console.log(photoLocation);
-  
-  database.storageRef.ref().on("child_added", function(childSnapshot) {
-
-    console.log(childSnapshot.val().city);
-    console.log(childSnapshot.val().state);
-    console.log(childSnapshot.val().country);
-    console.log(childSnapshot.val().title);
-  })
- 
-
-
-
-
-  });
 
 function showImage() {
   var storageRef = firebase.storage().ref();
