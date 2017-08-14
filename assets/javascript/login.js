@@ -37,8 +37,10 @@ var config = {
     loginGoogle();
   }); 
 
-    $('#logout-Button').on("click", function(){
-    logout();
+    $('#logout-Button').on("click", function(event){
+      event.preventDefault();
+      window.location = "index.html"
+      logout();
   });
 
   // Logout Function //
@@ -122,15 +124,17 @@ $("#upload-Button").on("click", function(event) {
     "title": title,
     "photoLocation": photoLocation,
   };
+
   console.log(addPhoto);
 
-  // database.ref().push({
-  //   city: city,
-  //   country: country,
-  //   title: title,
-  //   photoLocation: photoLocation,
-  //   dateAdded: firebase.database.ServerValue.TIMESTAMP,
-  // });
+  database.ref().push({
+    city: city,
+    country: country,
+    title: title,
+    photoLocation: photoLocation,
+    dateAdded: firebase.database.ServerValue.TIMESTAMP,
+
+  });
 
   
 
@@ -153,10 +157,7 @@ $("#upload-Button").on("click", function(event) {
   showImage()
 
 
-  clear();
-
-
-});
+  });
 
 function showImage() {
   var storageRef = firebase.storage().ref();
