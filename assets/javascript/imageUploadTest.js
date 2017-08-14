@@ -1,11 +1,11 @@
-/*var config = {
+var config = {
   apiKey: "AIzaSyCRSaq9IDjSHw50sM_9fMbgD2jR74DarUA",
   authDomain: "cliptrip-24402.firebaseapp.com",
   databaseURL: "https://cliptrip-24402.firebaseio.com",
   projectId: "cliptrip-24402",
   storageBucket: "cliptrip-24402.appspot.com",
   messagingSenderId: "401198821400"
-};*/
+};
 firebase.initializeApp(config);
 
   // Get a reference to the storage service, which is used to create references in your storage bucket

@@ -18,6 +18,9 @@ var provider = new firebase.auth.GoogleAuthProvider();
 var userId = "";
 var name = "";
 var email = "";
+// var user;
+// var selectedFile;
+
 
  var user = firebase.auth().currentUser;
 
@@ -111,12 +114,35 @@ $("#upload-Button").on("click", function(event) {
   var storage = firebase.storage();
 
   // Get a reference to the upload location from Firebase storage bucket //
-  var timestamp = Number(new Date(title));
+  var timestamp = Number(new Date());
 
   var city = $("#city-Input").val().trim();
   var country = $("#country-Input").val().trim();
-  var title = $("title-Input").val();
+  var title = $("#title-Input").val().trim();
   var photoLocation = $(city + country);
+  var addPhoto = {
+    "city": city,
+    "country": country,
+    "title": title,
+    "photoLocation": photoLocation,
+  };
+  console.log(addPhoto);
+
+  database.ref().push({
+    city: city,
+    country: country,
+    title: title,
+    photoLocation: photoLocation,
+    dateAdded: firebase.database.ServerValue.TIMESTAMP,
+  });
+
+  
+
+  // Log these to the console //
+  console.log(city);
+  console.log(country);
+  console.log(title);
+  console.log(photoLocation);
   
 
   // Create a storage reference from our storage service
@@ -128,19 +154,30 @@ $("#upload-Button").on("click", function(event) {
   storageRef.put(file_data);
 
   showImage()
+
+
+  clear();
 });
 
 function showImage() {
   var storageRef = firebase.storage().ref();
   var spaceRef = storageRef.child("images/1502646473076.jpg");
   storageRef.child("1502646473076.jpg").getDownloadURL().then(function(url) {
-    console.log('Got Download URL');
+    console.log('Got download URL');
     var test = url;
     alert(url);
     document.querySelector('img').src = test;
   }).catch(function(error) {
 
   });
+
+  function clear() {
+    $("#city-Input").val("");
+    $("#country-Input").val("");
+    $("#title-Input").val("");
+
+
+  };
 }
 
 
