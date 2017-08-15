@@ -9,12 +9,9 @@
 	<link href="https://fonts.googleapis.com/css?family=Lobster|Poppins|Righteous|Sedgwick+Ave" rel="stylesheet">
 	<!-- Our CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-<<<<<<< HEAD
-
-=======
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
->>>>>>> 707be8225c8d44c8181dfb57236162333e98dd62
+
 	<!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
     
@@ -27,16 +24,10 @@
 	<div class="container secondary">
 		<nav class="navbar navbar-default">
 			<div class="navbar-header">
-      			<!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> -->
-        				<!-- <span class="sr-only">Toggle navigation</span>
-        				<span class="icon-bar"></span>
-        				<span class="icon-bar"></span>
-        				<span class="icon-bar"></span> -->
-      			<!-- </button> -->
       				<a class="navbar-brand" href="index.html"><img id="logo" alt="click_Trip_Logo" src="assets/images/clickTripLogo.png"></a>
     		</div>
     		<div class="navbar navbar-body navbar-right">
-    				<div class="collapse navbar-collapse" id="navbarbullshit">
+    				<div class="collapse navbar-collapse" id="navbarbs">
       					<ul class="nav navbar-nav">
         					<li class="button"><a href="#"> Contact <span class="sr-only">(current)</span></a></li>
         					<li><a href="#"> About </a></li>
@@ -48,27 +39,49 @@
 					</div>
 			</div>
         </nav>
+
+    <!-- Different inputs that appear on click including city, country, title, and upload and submit buttons -->
+
         <div class="row" id="userInput">
-        	<div class="col-lg-4">
+        	<div class="col-lg-2">
         		<form>
   					<div class="form-group">   
-    					<input type="text" class="form-control" id="city-Input" aria-describedby="emailHelp" placeholder="City">
+    					<input type="text" class="form-control" id="city-Input" aria-describedby="city-Input" placeholder="City*">
     					</div>
     			</form>
-    		</div>   				
-			<div class="col-lg-4">
+    		</div> 
+    		<br>
+    		<div class="col-lg-2">
+        		<form>
+  					<div class="form-group">   
+    					<input type="text" class="form-control" id="state-Input" aria-describedby="state-Input" placeholder="State">
+    					</div>
+    			</form>
+    		</div>  				
+			<div class="col-lg-2">
 				<form>
 					<div class="form-group">
-    					<input type="text" class="form-control" id="country" aria-describedby="country-Input" placeholder="Country">
+    					<input type="text" class="form-control" id="country-Input" aria-describedby="country-Input" placeholder="Country*">
     				</div>
     			</form>
     		</div>
-  			<div class="col-lg-4">
-  				<input class="upload-Button" type="file" name="img">
-  				<br>
-  				<button id="upload-Button" type="button"> Upload </button>
+    		<div class="col-lg-2">
+				<form>
+					<div class="form-group">
+    					<input type="text" class="form-control" id="title-Input" aria-describedby="title-Input" placeholder="Title*">
+    				</div>
+    			</form>
+    		</div>
+  			<div class="col-lg-2">
+  				<label for="icon"> </label>
+  				<input accept=".jpg, .jpeg, .png" type="file" id="photo-Upload" name="icon">
+  				</div>
+  				<div class="col-lg-2">
+  				<button type="submit" id="upload-Button"> Upload Photo </button>
   			</div>
   		</div>
+
+  	<!-- The various flipping panels that contain the city names and photos -->
         <div class="row initial">
         	<div class="text-center">
         		<div class="col-lg-4">
@@ -77,18 +90,18 @@
     						<div class="front">
         						<div class="panel panel-default">
         							<div class="panel panel-header">
-        								Berlin
+        								Germany
         							</div>
-        						<div class="panel panel-body Berlin">
+        						<div class="panel panel-body Germany">
         						</div>
         						</div>
         					</div>
         					<div class="back">
         						<div class="panel panel-default">
         							<div class="panel panel-header">
-        								Athens
+        								Greece
         							</div>
-        							<div class="panel panel-body Athens">
+        							<div class="panel panel-body Greece">
         							</div>
         						</div>
         					</div>
@@ -100,18 +113,18 @@
         					<div class="front">
         						<div class="panel panel-default">
         							<div class="panel panel-header">
-        								Kyoto
+        								Japan
         							</div>
-        							<div class="panel panel-body Kyoto">
+        							<div class="panel panel-body Japan">
         							</div>
         						</div>
         					</div>
         					<div class="back">
         						<div class="panel panel-default">
         							<div class="panel panel-header">
-        								Amsterdam
+        								The Netherlands
         							</div>
-        							<div class="panel panel-body Amsterdam">
+        							<div class="panel panel-body TheNetherlands">
         							</div>
         						</div>
         					</div>
@@ -124,9 +137,9 @@
     						<div class="front">
         						<div class="panel panel-default">
         							<div class="panel panel-header">
-        								Hong Kong
+        								China
         							</div>
-        						<div class="panel panel-body HK">
+        						<div class="panel panel-body China">
         						</div>
         					</div>
         					</div>
@@ -147,24 +160,26 @@
     						<div class="front">
         						<div class="panel panel-default">
         							<div class="panel panel-header">
-        								Kansas City
+        								U.S.A.
         							</div>
-        							<div class="panel panel-body KC">
+        							<div class="panel panel-body USA">
+        							<!-- <img src="/assets/javascript/login.js" height="125px" width="50px"/> -->
         							</div>
         						</div>	
         					</div>
         					<div class="back">
         						<div class="panel panel-default">
         							<div class="panel panel-header">
-        								Groningen
+        								Italy
         							</div>
-        							<div class="panel panel-body Groningen">
+        							<div class="panel panel-body Italy">
         							</div>
         						</div>
         					</div>
         				</div>
         			</div>
 				</div>
+				<!-- "About Me" Panel with different personal categories -->
         		<div class="col-lg-4">
         			<div class="panel panel-default cityinfo">
                        
@@ -185,13 +200,68 @@
 					</div>
         		</div>
         	</div>
+        </div>
+       </div>
+
+       <!-- Third row of panels added later -->
+       <div class="row secondary">
+        	<div class="text-center">
+        		<div class="col-lg-4">
+        			<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+  						<div class="flipper">
+    						<div class="front">
+        						<div class="panel panel-default">
+        							<div class="panel panel-header">
+        								France
+        							</div>
+        						<div class="panel panel-body France">
+        						</div>
+        						</div>
+        					</div>
+        					<div class="back">
+        						<div class="panel panel-default">
+        							<div class="panel panel-header">
+        								The United Kingdom
+        							</div>
+        							<div class="panel panel-body TheUnitedKingdom">
+        							</div>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+        		</div>
+        		<div class="col-lg-4">
+        			<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+  						<div class="flipper">
+    						<div class="front">
+        						<div class="panel panel-default">
+        							<div class="panel panel-header">
+        								The Czech Republic
+        							</div>
+        						<div class="panel panel-body CzechRep">
+        						</div>
+        						</div>
+        					</div>
+        					<div class="back">
+        						<div class="panel panel-default">
+        							<div class="panel panel-header">
+        								Belgium
+        							</div>
+        							<div class="panel panel-body Belgium">
+        							</div>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
         </div>	
 
 
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+
 <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-database.js"></script>
@@ -200,6 +270,7 @@
 <script type="text/javascript" src="assets/javascript/login.js"></script>
 
 <script type="text/javascript" src="assets/javascript/java.js"></script>
+<!-- <script type="text/javascript" src="assets/javascript/firebase.js"></script> -->
 
 
 
