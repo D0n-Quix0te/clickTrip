@@ -178,6 +178,7 @@ $("#upload-Button").on("click", function(event) {
 }
 
 var user = firebase.auth().currentUser;
+<<<<<<< HEAD
     var name, email, photoUrl, uid, emailVerified;
 
     firebase.auth().onAuthStateChanged(function(user){
@@ -204,6 +205,30 @@ var user = firebase.auth().currentUser;
 }
     
 
+=======
+var name, email, photoUrl, uid, emailVerified;
+
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+  } else {
+    // No user is signed in.
+  }
+
+  if (user != null) {
+    name = user.displayName;
+    email = user.email;
+    photoUrl = user.photoUrl;
+    emailVerified = user.emailVerified;
+    uid = user.uid;
+    $("#name-display").append(name);
+    $("#profilepic").html("<img src= " + photoUrl + ">");
+    $("#profilepic").addClass("smaller");
+    console.log(name);
+    console.log(email);
+    console.log(photoUrl);
+  }
+>>>>>>> 1bcc58c26f2e0f0cf7a4b630c127f49b6f68d47e
 });
 
 
