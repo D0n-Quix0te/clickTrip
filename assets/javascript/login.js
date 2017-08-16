@@ -19,18 +19,7 @@ var config = {
   var categories = ["Belgium", "China", "Czech Republic", "France", "Germany", "Greece", "Italy", "Japan", "The Netherlands", "The Philippines", "The United Kingdom", "The United States"]
   var user = firebase.auth().currentUser;
 
-// var user = firebase.auth().currentUser;
 
-//   user.updateProfile({
-//   displayName: " ",
-//   photoURL: "../images/photographer-silhouettes.jpg"
-//   }).then(function() {
-//   // Update Successful.
-//   }).catch(function(error) {
-//   // An error happened.
-//   });
-
-  // provider.addScope('https://www.googleapis.com/auth/admin.directory.customer.readonly');
 
 
 $("#upload-Button").on("click", function(event) {
@@ -62,13 +51,6 @@ $("#upload-Button").on("click", function(event) {
 
   });
 
-  // var fileButton = document.getElementById("photo-Upload");
-  //             fileButton.addEventListener('change', function(e){
-  //                 var file = e.target.files[0];
-  //                 var storageRef = firebase.storage().ref(file.name);
-  //                 storageRef.put(file.name);
-  //             }); 
-     // Get a reference to the storage service, which is used to create references in your storage bucket
   var storage = firebase.storage();
 
   // // Get a reference to the upload location from Firebase storage bucket //
