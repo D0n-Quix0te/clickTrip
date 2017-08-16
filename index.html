@@ -40,7 +40,6 @@
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     console.log(user.email);
-    console.log(user.displayName)
 
 
     var user = firebase.auth().currentUser;
