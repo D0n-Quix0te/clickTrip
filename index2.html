@@ -238,6 +238,7 @@
                         </div>
                         <div class="panel panel-body">
                             <ul class="personal-info">
+                                <li id="profilepic"></li>
                                 <li id="name-display"> Name: </li>
                                 <li id="email"> E-mail: </li>
                                 <li> Location: </li>
@@ -294,10 +295,11 @@
     emailVerified = user.emailVerified;
     uid = user.uid;  
     $("#name-display").append(name);
+    $("#profilepic").html("<img src=" + photoUrl + ">")
     console.log(name);
     console.log(email);
     console.log(photoUrl);
-    
+
 
 }
     
