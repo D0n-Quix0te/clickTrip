@@ -67,84 +67,84 @@
 	width: 250px;
 }
 .Germany {
-	background-image: url("../images/BerlinShellHaus.jpg");
+	background-image: url("../images/PanelPhotos/BerlinShellHaus.jpg");
 	background-position: center;
 	background-size: cover;
 	height: 250px;
 	border-top: 2px solid #d9d9d9;
 }
 .Japan {
-	background-image: url("../images/Kyoto-shiShrineRV.jpg");
+	background-image: url("../images/PanelPhotos/Kyoto-shiShrineRV.jpg");
 	background-position: center;
 	background-size: cover;
 	height: 250px;
 	border-top: 2px solid #d9d9d9;
 }
 .USA {
-	background-image: url("../images/KSKCSymphonyBW.jpg");
+	background-image: url("../images/PanelPhotos/KSKCSymphonyBW.jpg");
 	background-position: center;
 	background-size: cover;
 	height: 250px;
 	border-top: 2px solid #d9d9d9;
 }
 .France {
-	background-image: url("../images/CNHKTheLight6.jpg");
+	background-image: url("../images/PanelPhotos/EiffelArc.jpg");
 	background-position: center;
 	background-size: cover;
 	height: 250px;
 	border-top: 2px solid #d9d9d9;
 }
 .Greece {
-	background-image: url("../images/AthensNightViewRV.jpg");
+	background-image: url("../images/PanelPhotos/AthensNightViewRV.jpg");
 	background-position: center;
 	background-size: cover;
 	height: 250px;
 	border-top: 2px solid #d9d9d9;
 }
 .Philippines {
-	background-image: url("../images/PHTaalVolcano.jpg");
+	background-image: url("../images/PanelPhotos/PHTaalVolcano.jpg");
 	background-position: center;
 	background-size: cover;
 	height: 250px;
 	border-top: 2px solid #d9d9d9;
 }
 .CzechRep {
-	background-image: url("../images/NLAmsterdamCanalScape2.jpg");
+	background-image: url("../images/PanelPhotos/Prague.ChurchofourladyinfrontofTýnRedo.jpg");
 	background-position: center;
 	background-size: cover;
 	height: 250px;
 	border-top: 2px solid #d9d9d9;
 }
 .TheNetherlands {
-	background-image: url("../images/NLGroningenColors1Smaller.jpg");
+	background-image: url("../images/PanelPhotos/NLGroningenColors1Smaller.jpg");
 	background-position: center;
 	background-size: cover;
 	height: 250px;
 	border-top: 2px solid #d9d9d9;
 }
 .China {
-	background-image: url("../images/CNColorfulLanterns.jpg");
+	background-image: url("../images/PanelPhotos/CNColorfulLanterns.jpg");
 	background-position: center;
 	background-size: cover;
 	height: 250px;
 	border-top: 2px solid #d9d9d9;
 }
 .Italy {
-	background-image: url("../images/VeneziaColorsReEdit.jpg");
+	background-image: url("../images/PanelPhotos/VeneziaColorsReEdit.jpg");
 	background-position: center;
 	background-size: cover;
 	height: 250px;
 	border-top: 2px solid #d9d9d9;
 }
 .TheUnitedKingdom {
-	background-image: url("../images/CNZhangjiajie2.jpg");
+	background-image: url("../images/PanelPhotos/London.Horse.Guard.RV.jpg");
 	background-position: center;
 	background-size: cover;
 	height: 250px;
 	border-top: 2px solid #d9d9d9;
 }
 .Belgium {
-	background-image: url("../images/CAWDCHRevisitDiffAngle1.jpg");
+	background-image: url("../images/PanelPhotos/BruggeBWAlleyRV.jpg");
 	background-position: center;
 	background-size: cover;
 	height: 250px;
@@ -343,6 +343,9 @@ goes here */
   position: absolute;
   top: 0;
   left: 0;
+}
+.flip-container:hover .flipper, .flip-container.hover .flipper, .flip-container.flip .flipper {
+	transform: rotateY(180deg);
 }
 /* front pane, placed above back */
 
