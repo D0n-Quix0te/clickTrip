@@ -17,7 +17,7 @@ var config = {
   var name = "";
   var email = "";
   var categories = ["Belgium", "China", "Czech Republic", "France", "Germany", "Greece", "Italy", "Japan", "The Netherlands", "The Philippines", "The United Kingdom", "The United States"]
- var user = firebase.auth().currentUser;
+  var user = firebase.auth().currentUser;
 
 // var user = firebase.auth().currentUser;
 
@@ -152,15 +152,10 @@ $("#upload-Button").on("click", function(event) {
       var credential = error.credential;
       console.log("Error - " + errorCode + "  " + errorMessage + "  " + email + "  " + credential);
     });
-    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-  // Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;
-  // ...
-});
-
 
 }
+
+
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
