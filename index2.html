@@ -229,7 +229,7 @@
         			
 				<!-- "About Me" Panel with different personal categories -->
         		<div class="col-lg-2">
-        			<div id="profilepic"></div>
+        			
                     <div class="panel panel-default cityinfo">
                        
                         <div class="panel panel-header">
@@ -238,7 +238,7 @@
                         <div class="panel panel-body">
                         </div>
                         <div class="panel panel-body">
-                                                 
+                            <div id="profilepic"></div>                     
                             <ul class="personal-info">
 
                                 <li id="name-display"> Name: </li>
@@ -278,40 +278,7 @@
 
 <script type="text/javascript" src="assets/javascript/java.js"></script>
 <!-- <script type="text/javascript" src="assets/javascript/firebase.js"></script> -->
-<script>
 
-    var user = firebase.auth().currentUser;
-    var name, email, photoUrl, uid, emailVerified;
-
-    firebase.auth().onAuthStateChanged(function(user){
-      if (user) {
-        // User is signed in.
-      } else {
-        // No user is signed in.
-      }
- 
-    if (user != null) {
-    name = user.displayName;
-    email = user.email;
-    photoUrl = user.photoURL;
-    emailVerified = user.emailVerified;
-    uid = user.uid;  
-    $("#name-display").append(name);
-    $("#profilepic").html("<img src=" + photoUrl + ">");
-    $("#profilepic").addclass("smaller");
-    console.log(name);
-    console.log(email);
-    console.log(photoUrl);
-
-
-}
-    
-
-});
-    
-
-    
-</script>
 
 
 
