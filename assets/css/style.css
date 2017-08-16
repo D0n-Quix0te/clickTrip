@@ -374,5 +374,8 @@ goes here */
 	display: none;
 }
 
-
+#profilepic {
+	width: 200px;
+	height: auto;
+}
 
