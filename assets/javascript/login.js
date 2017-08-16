@@ -75,12 +75,16 @@ $("#upload-Button").on("click", function(event) {
   var locationInformation = Number(new Date());
 
   //  // Create a storage reference from our storage service
-  var storageRef = firebase.storage().ref(locationInformation.toString());
+  var storageRef = firebase.storage().ref();
+
+  var photoRef = storageRef.child(title + "_" + city + "_" + country);
 
   // // Grab button ID and adds content to file_data //
   var file_data = $("#photo-Upload").prop('files')[0];
 
-  storageRef.put(file_data);
+  //storageRef.put(file_data);
+
+  photoRef.put(file_data);
 
   console.log(file_data);
 
@@ -93,13 +97,31 @@ $("#upload-Button").on("click", function(event) {
   console.log(title);
   // console.log(photoLocation);
   
-  // database.storageRef.ref().on("child_added", function(childSnapshot) {
+  database.ref().on("child_added", function(childSnapshot) {
 
-  //   console.log(childSnapshot.val().city);
-  //   console.log(childSnapshot.val().state);
-  //   console.log(childSnapshot.val().country);
-  //   console.log(childSnapshot.val().title);
-  // })
+    photoRef.getDownloadURL().then(function(url) {
+      console.log('downloadUrl=', url);
+      
+      var img = $('<img>');
+      $(img).attr('src', url);
+
+      $(".CzechRep").append(img);
+
+    });
+
+    console.log(childSnapshot.val().city);
+    console.log(childSnapshot.val().state);
+    console.log(childSnapshot.val().country);
+    console.log(childSnapshot.val().title);
+
+    var cityName = (childSnapshot.val().city);
+    var stateName = (childSnapshot.val().state);
+    var countryName = (childSnapshot.val().country);
+    var titleName = (childSnapshot.val().title);
+
+
+    
+  })
  
 
 
@@ -186,6 +208,7 @@ function showImage() {
   }).catch(function(error) {
 
   });
+};
 
   function clear() {
     $("#city-Input").val("");
@@ -193,8 +216,8 @@ function showImage() {
     $("#title-Input").val("");
 
 
-  };
-}
+  }
+
 
 
 
