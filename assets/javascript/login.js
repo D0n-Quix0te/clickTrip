@@ -17,7 +17,7 @@ var config = {
   var name = "";
   var email = "";
   var categories = ["Belgium", "China", "Czech Republic", "France", "Germany", "Greece", "Italy", "Japan", "The Netherlands", "The Philippines", "The United Kingdom", "The United States"]
- var user = firebase.auth().currentUser;
+  var user = firebase.auth().currentUser;
 
 // var user = firebase.auth().currentUser;
 
