@@ -17,7 +17,16 @@
     
     
     <title>clickTrip</title>
+
+    <style>
+      #map {
+        width: 100%;
+        height: 200px;
+ 
+      }
+    </style>
 </head>
+
 
 
 <body class="background2">
@@ -245,8 +254,10 @@
                                 	<li> Location: </li>
                                 	<li> Countries Visited: </li>
                                 	<li> About Me: </li>
-                            	</ul>
 
+                            	</ul>
+                                
+                            <div id="map"></div>
 						</div>
         			</div>
 				</div>
@@ -299,6 +310,8 @@
 <script type="text/javascript" src="assets/javascript/login.js"></script>
 
 <script type="text/javascript" src="assets/javascript/java.js"></script>
+<script type="text/javascript" src="assets/javascript/googlemap.js"></script>
+
 <!-- <script type="text/javascript" src="assets/javascript/firebase.js"></script> -->
 
 
@@ -328,18 +341,15 @@
     console.log(name);
     console.log(email);
     console.log(photoUrl);
-
-
 }
     
-
 });
-    
-
-    
+       
 </script>
 
-
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCeQTZ3yiJwXUcRQeRhKiHQaTuJ7Bg_X0&callback=initMap">
+</script>
 
 
 
