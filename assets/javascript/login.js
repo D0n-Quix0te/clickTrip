@@ -20,7 +20,6 @@ var config = {
   var user = firebase.auth().currentUser;
 
 
- document.querySelector(".panel-default").classList.toggle("flip");
 
 $("#upload-Button").on("click", function(event) {
   event.preventDefault();
@@ -31,13 +30,13 @@ $("#upload-Button").on("click", function(event) {
   var state = $("#state-Input").val().trim();
   var country = $("#country-Input").val().trim();
   var title = $("#title-Input").val().trim();
-  // var photoLocation = $(city + country); 
+ 
   var addPhoto = {
     "city": city,
     "state": state,
     "country": country,
     "title": title,
-    // "photoLocation": photoLocation,
+    
   };
 
   console.log(addPhoto);
@@ -46,7 +45,7 @@ $("#upload-Button").on("click", function(event) {
     city: city,
     country: country,
     title: title,
-    // photoLocation: photoLocation,
+   
     dateAdded: firebase.database.ServerValue.TIMESTAMP,
 
   });
@@ -160,33 +159,6 @@ $("#upload-Button").on("click", function(event) {
 }
  
 
-//   var user = firebase.auth().currentUser;
-//   var name, email, photoUrl, uid, emailVerified;
-
-//   firebase.auth().onAuthStateChanged(function(user) {
-//   if (user) {
-//     // User is signed in.
-//   } else {
-//     // No user is signed in.
-//   }
-
-//   if (user != null) {
-//     name = user.displayName;
-//     email = user.email;
-//     photoUrl = user.photoUrl;
-//     emailVerified = user.emailVerified;
-//     uid = user.uid;
-//     $("#name-display").append(name);
-//     $("#profilepic").html("<img src= " + photoUrl + ">");
-//     $("#profilepic").addClass("smaller");
-//     console.log(name);
-//     console.log(email);
-//     console.log(photoUrl);
-//   }
-
-// });
-
-
 
 function showImage() {
   var storageRef = firebase.storage().ref();
@@ -209,10 +181,12 @@ function showImage() {
 
   }
 
-  $(".Greece").click(function() {
+ $(".Greece").click(function() {
     window.location.href = "../../greece.html";
     return false;
-  })
+
+})
+ 
 
 
 

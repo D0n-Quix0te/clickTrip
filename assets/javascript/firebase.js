@@ -1,14 +1,14 @@
-// // Initialize Firebase
-// var config = {
-//   apiKey: "AIzaSyCRSaq9IDjSHw50sM_9fMbgD2jR74DarUA",
-//   authDomain: "cliptrip-24402.firebaseapp.com",
-//   databaseURL: "https://cliptrip-24402.firebaseio.com",
-//   projectId: "cliptrip-24402",
-//   storageBucket: "cliptrip-24402.appspot.com",
-//   messagingSenderId: "401198821400"
-// };
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyCRSaq9IDjSHw50sM_9fMbgD2jR74DarUA",
+  authDomain: "cliptrip-24402.firebaseapp.com",
+  databaseURL: "https://cliptrip-24402.firebaseio.com",
+  projectId: "cliptrip-24402",
+  storageBucket: "cliptrip-24402.appspot.com",
+  messagingSenderId: "401198821400"
+};
 
-// firebase.initializeApp(config);
+firebase.initializeApp(config);
 
 
 
@@ -39,23 +39,7 @@ if (user != null) {
 
 
 
-$("#upload-Button").on("click", function(event) {
-  event.preventDefault();
 
-    // Get a reference to the storage service, which is used to create references in your storage bucket
-  var storage = firebase.storage();
-
-  // Get a reference to the upload location from Firebase storage bucket //
-  var timestamp = Number(new Date());
-
-  // Create a storage reference from our storage service
-  var storageRef = firebase.storage().ref(timestamp.toString());
-
-  // Grab button ID and adds content to file_data //
-  var file_data = $("#photo-Upload").prop('files')[0];
-
-  storageRef.put(file_data);
-})
 // Gets current username ///
 // var user = firebase.auth().currentUser;
 
