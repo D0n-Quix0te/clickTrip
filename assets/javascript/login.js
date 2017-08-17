@@ -182,13 +182,37 @@ function showImage() {
   }
 
  $(".Greece").click(function() {
-    window.location.href = "../../greece.html";
+    window.location.href = "greece.html";
     return false;
 
 })
- 
+  $(".Germany").click(function() {
+    window.location.href = "germany.html";
+    return false;
 
+})
+  $(".CzechRep").click(function() {
+    window.location.href = "czechrepublic.html";
+    return false;
 
+})
+    $(".China").click(function() {
+    window.location.href = "china.html";
+    return false;
+
+})
+function showImage() {
+  var storageRef = firebase.storage().ref();
+         var spaceRef = storageRef.child('Berlin');
+         storageRef.child('Berlin').getDownloadURL().then(function(url) {
+             var test = url;
+             alert(url);
+             document.querySelector('img').src = test;
+
+         }).catch(function(error) {
+
+         });
+}
 
 
 
