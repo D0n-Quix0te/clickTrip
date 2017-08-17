@@ -20,7 +20,7 @@ var config = {
   var user = firebase.auth().currentUser;
 
 
-
+ document.querySelector(".panel-default").classList.toggle("flip");
 
 $("#upload-Button").on("click", function(event) {
   event.preventDefault();
@@ -158,7 +158,7 @@ $("#upload-Button").on("click", function(event) {
     });
 
 }
-  document.querySelector(".panel-default").classList.toggle("flip")
+ 
 
 //   var user = firebase.auth().currentUser;
 //   var name, email, photoUrl, uid, emailVerified;
@@ -208,6 +208,11 @@ function showImage() {
 
 
   }
+
+  $(".Greece").click(function() {
+    window.location.href = "../../greece.html";
+    return false;
+  })
 
 
 
