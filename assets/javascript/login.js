@@ -45,9 +45,7 @@ $("#upload-Button").on("click", function(event) {
   database.ref().push({
     city: city,
     country: country,
-    title: title,
-    url: url,
-   
+    title: title,   
     dateAdded: firebase.database.ServerValue.TIMESTAMP,
 
   });
