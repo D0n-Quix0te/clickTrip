@@ -100,20 +100,20 @@ $("#upload-Button").on("click", function(event) {
 
       $(".CzechRep").append(img);
 
-    });
-    console.log(childSnapshot);
+    
+    // console.log(childSnapshot);
 
-    // console.log(childSnapshot.val().city);
-    // console.log(childSnapshot.val().state);
-    // console.log(childSnapshot.val().country);
-    // console.log(childSnapshot.val().title);
+    console.log(childSnapshot.val().city);
+    console.log(childSnapshot.val().state);
+    console.log(childSnapshot.val().country);
+    console.log(childSnapshot.val().title);
 
     var cityName = (childSnapshot.val().city);
     var stateName = (childSnapshot.val().state);
     var countryName = (childSnapshot.val().country);
     var titleName = (childSnapshot.val().title);
 
-
+});
     
   })
  
