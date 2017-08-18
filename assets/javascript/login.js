@@ -267,5 +267,9 @@ var createImage = function(src, title) {
 // console.log(greeceImages);
 // $("div.Greece").append(greeceImages);
 
+$("#upload-Button-Initial").on("click", function(event) {
+  $("#userInput").show();
+  event.preventDefault();
+})
 
 

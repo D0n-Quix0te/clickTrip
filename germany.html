@@ -45,9 +45,79 @@
 					</div>
 			</div>
         </nav>
+            <!-- Different inputs that appear on click including city, country, title, and upload and submit buttons -->
+
+        <div class="row" id="userInput">
+          <div class="col-lg-2">
+            <form>
+            <div class="form-group">   
+              <input type="text" class="form-control" id="city-Input" aria-describedby="city-Input" placeholder="City*">
+              </div>
+          </form>
+        </div> 
+        <br>
+        <div class="col-lg-2">
+            <form>
+            <div class="form-group">   
+              <input type="text" class="form-control" id="state-Input" aria-describedby="state-Input" placeholder="State">
+              </div>
+          </form>
+        </div>          
+      <div class="col-lg-2">
+        <form>
+          <div class="form-group">
+              <input type="text" class="form-control" id="country-Input" aria-describedby="country-Input" placeholder="Country*">
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-2">
+        <form>
+          <div class="form-group">
+              <input type="text" class="form-control" id="title-Input" aria-describedby="title-Input" placeholder="Title*">
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-2">
+          <label for="icon"> </label>
+          <input accept=".jpg, .jpeg, .png" type="file" id="photo-Upload" name="icon">
+          </div>
+          <div class="col-lg-2">
+          <button type="submit" id="upload-Button"> Upload Photo </button>
+        </div>
+      </div>
+
       <div class="images germany"></div>
 
-  <div id="map"></div>
+  <!-- "About Me" Panel with different personal categories -->
+      <div class="row deutschland">
+        <div class="text-center">
+          <div class="col-lg-9 germanPhotos">
+            </div>
+          <div class="col-lg-3">
+            <div class="panel panel-default cityinfo">                     
+                        <div class="panel panel-header">
+                            About
+                        </div>
+                        <!-- <div class="panel panel-body">
+                        </div> -->
+                        <div class="panel panel-body">
+                            <div id="profilepic"></div>
+                              <ul class="personal-info">
+                                  <li id="name-display"> Name: </li>
+                                  <li id="email-shiz"> E-mail: </li>
+                                  <li> Location: </li>
+                                  <li> Countries Visited: </li>
+                                  <li> About Me: </li>
+
+                              </ul>
+
+            <div id="map"></div>
+
+            </div>
+              </div>
+        </div>
+        </div>
+        </div>
 
 <script
   src="https://code.jquery.com/jquery-3.2.1.js"
@@ -61,9 +131,8 @@
 <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-storage.js"></script>
 <script type="text/javascript" src="assets/javascript/login.js"></script>
 
-<script type="text/javascript" src="assets/javascript/java.js"></script>
 <script type="text/javascript" src="assets/javascript/googlemap.js"></script>
-<!-- <script type="text/javascript" src="assets/javascript/germany.js"></script> -->
+
 
 
 <script>
