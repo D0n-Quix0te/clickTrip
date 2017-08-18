@@ -165,7 +165,7 @@ $("#upload-Button").on("click", function(event) {
 function showImage() {
   var storageRef = firebase.storage().ref();
   var spaceRef = storageRef.child("images/Germany/BautzenBunt.jpg");
-  storageRef.child("Germany").getDownloadURL().then(function(url) {
+  storageRef.child("images/Germany/BautzenBunt.jpg").getDownloadURL().then(function(url) {
     console.log('Got download URL');
     var test = url;
     alert(url);
