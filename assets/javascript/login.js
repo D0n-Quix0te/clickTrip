@@ -36,6 +36,7 @@ $("#upload-Button").on("click", function(event) {
     "state": state,
     "country": country,
     "title": title,
+    "url": url,
     
   };
 
@@ -45,7 +46,7 @@ $("#upload-Button").on("click", function(event) {
     city: city,
     country: country,
     title: title,
-    downloadURL: downloadURL,
+    url: url,
    
     dateAdded: firebase.database.ServerValue.TIMESTAMP,
 
@@ -86,7 +87,7 @@ $("#upload-Button").on("click", function(event) {
       console.log('downloadUrl=', url);
       
       database.ref().push({
-        downloadURL: downloadURL,
+        url: url,
       });
 
       var img = $('<img>');
