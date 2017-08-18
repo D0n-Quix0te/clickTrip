@@ -53,22 +53,11 @@ $("#upload-Button").on("click", function(event) {
   var storage = firebase.storage();
 
 
-
   // // Get a reference to the upload location from Firebase storage bucket //
   var locationInformation = Number(new Date());
 
   //  // Create a storage reference from our storage service
   var storageRef = firebase.storage().ref();
-
-  var imagesRef = storageRef.child('Germany');
-
-  var fileName = 'BautzenBunt.jpg';
-  var spaceJam = imagesRef.child(fileName);
-  var path = spaceJam.fullPath;
-  var nameStuff = spaceJam.nameStuff;
-
-  var spaceRef = storageRef.child('Germany/BautzenBunt.jpg');
-
 
   var photoRef = storageRef.child(title + "_" + city + "_" + country);
 
