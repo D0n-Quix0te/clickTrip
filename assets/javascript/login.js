@@ -112,7 +112,7 @@ $("#upload-Button").on("click", function(event) {
       var img = $('<img>');
       $(img).attr('src', url);
 
-      $(".germanPhotos").append("<img src=" + img + ">");
+      $(".germanPhotos").append(img);
 
     
     // console.log(childSnapshot);
