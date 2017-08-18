@@ -36,31 +36,31 @@ $("#upload-Button").on("click", function(event) {
     "title": title,
     
   };
-    console.log(file.name);
+    // console.log(file);
 
-    var uploadTask = storageRef.child(city + state + country + title).put(file);
+    // var uploadTask = storageRef.child(city + state + country + title).put(file);
 
-    uploadTask.on('state_changed', function(snapshot) {
+    // uploadTask.on('state_changed', function(snapshot) {
 
-      var progress = (snapshot.bytesTransferred/snapshot.totalBytes) * 100;
-      console.log('Upload is ' + progress + '% done');
-      switch (snapshot.state) {
-        case firebase.storage.TaskState.PAUSED:
-          console.log('Upload is Paused');
-          break;
-        case firebase.storage.TaskState.RUNNING:
-          console.log('Upload is Running');
-          break;
-      }
-    }, function(error) {
+    //   var progress = (snapshot.bytesTransferred/snapshot.totalBytes) * 100;
+    //   console.log('Upload is ' + progress + '% done');
+    //   switch (snapshot.state) {
+    //     case firebase.storage.TaskState.PAUSED:
+    //       console.log('Upload is Paused');
+    //       break;
+    //     case firebase.storage.TaskState.RUNNING:
+    //       console.log('Upload is Running');
+    //       break;
+    //   }
+    // }, function(error) {
 
-    }, function() {
+    // }, function() {
 
-      var downloadURL = uploadTask.snapshot.downloadURL;
-      console.log(downloadUrl);
-    });
+    //   var downloadURL = uploadTask.snapshot.downloadURL;
+    //   console.log(downloadUrl);
+    // });
   
-
+   
   var storage = firebase.storage();
 
 
