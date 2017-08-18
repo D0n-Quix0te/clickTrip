@@ -254,10 +254,10 @@ function showImage() {
          });
 }
 
-var greeceImage = function(src, title) {
+var createImage = function(src, title) {
   var img = new Image();
   img.src = src;
-  img.alt = alt;
+  img.alt = title;
   img.title = title;
   return img;
 };
