@@ -173,7 +173,7 @@ $("#upload-Button").on("click", function(event) {
   var spaceRef = storageRef.child("Germany/BautzenBunt.jpg");
   spaceRef.getDownloadURL().then(function(url) {
     var className = origin.toLowerCase();
-    $("." + className).append("<img src='" + url + " '>");
+    $(".germany").append("<img src= " + url + " >");
     
     // document.querySelector('img').src = url;
   }).catch(function(error) {
