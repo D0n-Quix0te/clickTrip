@@ -30,13 +30,6 @@ $("#upload-Button").on("click", function(event) {
   var state = $("#state-Input").val().trim();
   var country = $("#country-Input").val().trim();
   var title = $("#title-Input").val().trim();
-  // var metadata = {
-  //   customMetadata: {
-  //     city: "",
-  //     state: "",
-  //     country:
-  //   }
-  // }
   var addPhoto = {
     "city": city,
     "state": state,
@@ -50,6 +43,7 @@ $("#upload-Button").on("click", function(event) {
 
   database.ref().push({
     city: city,
+    state: state,
     country: country,
     title: title,   
     dateAdded: firebase.database.ServerValue.TIMESTAMP,
@@ -85,7 +79,7 @@ $("#upload-Button").on("click", function(event) {
   console.log(title);
   // console.log(photoLocation);
   
-  database.ref().on("child_added", "child_changed", function(childSnapshot) {
+  database.ref().on("child_added", function(childSnapshot) {
 
     photoRef.getDownloadURL().then(function(url) {
       console.log('downloadUrl=', url);
@@ -97,7 +91,7 @@ $("#upload-Button").on("click", function(event) {
       var img = $('<img>');
       $(img).attr('src', url);
 
-      $(".CzechRep").append(img);
+      $(".germany").append(img);
 
     
     // console.log(childSnapshot);
@@ -112,8 +106,9 @@ $("#upload-Button").on("click", function(event) {
     var countryName = (childSnapshot.val().country);
     var titleName = (childSnapshot.val().title);
 
+// $(".germany").append("<img src= " + url + ">" + "<p>" + cityName + "</p>"); 
 });
-    
+   
   })
  
 
@@ -176,7 +171,7 @@ $("#upload-Button").on("click", function(event) {
   var storageRef = firebase.storage().ref();
   var spaceRef = storageRef.child("Germany/BautzenBunt.jpg");
   spaceRef.getDownloadURL().then(function(url) {
-    var className = origin.toLowerCase();
+    // var className = origin.toLowerCase();
     $(".germany").append("<img src= " + url + " >");
     
     // document.querySelector('img').src = url;
