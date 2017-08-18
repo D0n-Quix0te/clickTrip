@@ -201,6 +201,46 @@ function showImage() {
     return false;
 
 })
+    $(".France").click(function() {
+    window.location.href = "france.html";
+    return false;
+
+})
+    $(".Italy").click(function() {
+    window.location.href = "italy.html";
+    return false;
+
+})
+    $(".Japan").click(function() {
+    window.location.href = "japan.html";
+    return false;
+
+})
+    $(".Belgium").click(function() {
+    window.location.href = "belgium.html";
+    return false;
+
+})
+    $(".Philippines").click(function() {
+    window.location.href = "philippines.html";
+    return false;
+
+})
+    $(".TheNetherlands").click(function() {
+    window.location.href = "netherlands.html";
+    return false;
+
+})
+    $(".USA").click(function() {
+    window.location.href = "usa.html";
+    return false;
+
+})
+    $(".TheUnitedKingdom").click(function() {
+    window.location.href = "uk.html";
+    return false;
+
+})
 function showImage() {
   var storageRef = firebase.storage().ref();
          var spaceRef = storageRef.child('Germany');
@@ -224,7 +264,7 @@ var greeceImage = function(src, title) {
 
 var greeceImages = ['AthensAcropolisSepia.jpg'];
 
-images.push(createImage('AthensAcropolisSepia.jpg', 'Athens Acropolis'));
+greeceImages.push(createImage('AthensAcropolisSepia.jpg', 'Athens Acropolis'));
 
 console.log(images);
 $("greece.html").append(greeceImages);
