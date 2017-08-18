@@ -44,3 +44,66 @@
 					</div>
 			</div>
         </nav>
+      <div class="images">
+
+      </div>
+
+
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-messaging.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-storage.js"></script>
+<script type="text/javascript" src="assets/javascript/login.js"></script>
+
+<script type="text/javascript" src="assets/javascript/java.js"></script>
+<script type="text/javascript" src="assets/javascript/googlemap.js"></script>
+<script type="text/javascript" src="assets/javascript/germany.js"></script>
+
+
+<script>
+
+    var user = firebase.auth().currentUser;
+    var name, email, photoUrl, uid, emailVerified;
+
+    firebase.auth().onAuthStateChanged(function(user){
+      if (user) {
+        // User is signed in.
+      } else {
+        // No user is signed in.
+      }
+ 
+    if (user != null) {
+    name = user.displayName;
+    email = user.email;
+    photoUrl = user.photoURL;
+    emailVerified = user.emailVerified;
+    uid = user.uid;  
+    $("#name-display").append(name);
+    $("#profilepic").html("<img src= " + photoUrl + ">");
+    $("#email-shiz").append(email);
+    $("#profilepic").html("<img src='https://process.filestackapi.com/AX73qH5DQ1CgQfGYC0YKYz/resize=width:200/" + photoUrl + "'>");
+
+    $("#profilepic").addClass("smaller");
+    console.log(name);
+    console.log(email);
+    console.log(photoUrl);
+}
+    
+});
+       
+</script>
+
+<script async defer
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCeQTZ3yiJwXUcRQeRhKiHQaTuJ7Bg_X0&callback=initMap">
+</script>
+
+
+</body>
+</html> 

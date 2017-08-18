@@ -165,12 +165,14 @@ $("#upload-Button").on("click", function(event) {
 function showImage() {
   var storageRef = firebase.storage().ref();
   var spaceRef = storageRef.child("Germany/BautzenBunt.jpg");
-  storageRef.child("Germany/BautzenBunt.jpg").getDownloadURL().then(function(url) {
-    console.log('Got download URL');
-    var test = url;
-    alert(url);
-    document.querySelector('img').src = test;
+  spaceRef.getDownloadURL().then(function(url) {
+    // console.log('Got download URL');
+    // var test = url;
+    // alert(url);
+    document.querySelector('img').src = url;
   }).catch(function(error) {
+
+    console.error(error);
 
   });
 };
