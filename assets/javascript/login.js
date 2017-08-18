@@ -35,9 +35,9 @@ $("#upload-Button").on("click", function(event) {
     "country": country,
     "title": title,
   
-
+      
   };
-   console.log(file.name);
+  
 
 
 
@@ -83,7 +83,7 @@ $("#upload-Button").on("click", function(event) {
   photoRef.put(file_data);
 
   console.log(file_data);
-
+console.log(file);
   
 
   // Log these to the console //
