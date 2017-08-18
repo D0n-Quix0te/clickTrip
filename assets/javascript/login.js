@@ -25,7 +25,6 @@ $("#upload-Button").on("click", function(event) {
   event.preventDefault();
 
   
-
   var city = $("#city-Input").val().trim();
   var state = $("#state-Input").val().trim();
   var country = $("#country-Input").val().trim();
@@ -36,19 +35,9 @@ $("#upload-Button").on("click", function(event) {
     "country": country,
     "title": title,
     
-    
   };
 
-  console.log(addPhoto);
-
-  database.ref().push({
-    city: city,
-    state: state,
-    country: country,
-    title: title,   
-    dateAdded: firebase.database.ServerValue.TIMESTAMP,
-
-  });
+  
 
   var storage = firebase.storage();
 
@@ -84,14 +73,21 @@ $("#upload-Button").on("click", function(event) {
     photoRef.getDownloadURL().then(function(url) {
       console.log('downloadUrl=', url);
       
-      database.ref().push({
-        url: url,
-      });
+      console.log(addPhoto);
+
+  database.ref().push({
+    city: city,
+    state: state,
+    country: country,
+    title: title,   
+    dateAdded: firebase.database.ServerValue.TIMESTAMP,
+
+  });
 
       var img = $('<img>');
       $(img).attr('src', url);
 
-      $(".germany").append(img);
+      $(".germanPhotos").append("<img src=" + img + ">");
 
     
     // console.log(childSnapshot);
@@ -168,18 +164,18 @@ $("#upload-Button").on("click", function(event) {
 
 
 // function showImage(origin, image) {
-  var storageRef = firebase.storage().ref();
-  var spaceRef = storageRef.child("Germany/BautzenBunt.jpg");
-  spaceRef.getDownloadURL().then(function(url) {
-    // var className = origin.toLowerCase();
-    $(".germany").append("<img src= " + url + " >");
+  // var storageRef = firebase.storage().ref();
+  // var spaceRef = storageRef.child("Germany/BautzenBunt.jpg");
+  // spaceRef.getDownloadURL().then(function(url) {
+  //   // var className = origin.toLowerCase();
+  //   $(".germany").append("<img src= " + url + " >");
     
-    // document.querySelector('img').src = url;
-  }).catch(function(error) {
+  //   // document.querySelector('img').src = url;
+  // }).catch(function(error) {
 
-    console.error(error);
+  //   console.error(error);
 
-  });
+  // });
 // };
 
   function clear() {
