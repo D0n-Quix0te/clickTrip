@@ -244,18 +244,18 @@ function showImage() {
     return false;
 
 })
-function showImage() {
-  var storageRef = firebase.storage().ref();
-         var spaceRef = storageRef.child('Germany');
-         storageRef.child('Germany').getDownloadURL().then(function(url) {
-             var test = url;
-             alert(url);
-             document.querySelector('img').src = test;
+// function showImage() {
+//   var storageRef = firebase.storage().ref();
+//          var spaceRef = storageRef.child('Germany');
+//          storageRef.child('Germany').getDownloadURL().then(function(url) {
+//              var test = url;
+//              alert(url);
+//              document.querySelector('img').src = test;
 
-         }).catch(function(error) {
+//          }).catch(function(error) {
 
-         });
-}
+//          });
+// }
 
 var createImage = function(src, title) {
   var img = new Image();
