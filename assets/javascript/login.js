@@ -89,11 +89,11 @@ $("#upload-Button").on("click", function(event) {
       $(".CzechRep").append(img);
 
     });
-
-    console.log(childSnapshot.val().city);
-    console.log(childSnapshot.val().state);
-    console.log(childSnapshot.val().country);
-    console.log(childSnapshot.val().title);
+    console.log(childSnapshot);
+    // console.log(childSnapshot.val().city);
+    // console.log(childSnapshot.val().state);
+    // console.log(childSnapshot.val().country);
+    // console.log(childSnapshot.val().title);
 
     var cityName = (childSnapshot.val().city);
     var stateName = (childSnapshot.val().state);
@@ -267,7 +267,7 @@ var greeceImages = ['AthensAcropolisSepia.jpg'];
 greeceImages.push(createImage('../images/Greece/AthensAcropolisSepia.jpg', 'Athens Acropolis'));
 
 console.log(greeceImages);
-$("greece.html").append(greeceImages);
+$("div.Greece").append(greeceImages);
 
 
 
