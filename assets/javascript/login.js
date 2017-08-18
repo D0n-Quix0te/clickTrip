@@ -265,12 +265,12 @@ var createImage = function(src, title) {
   return img;
 };
 
-var greeceImages = ['AthensAcropolisSepia.jpg'];
+// var greeceImages = ['AthensAcropolisSepia.jpg'];
 
-greeceImages.push(createImage('../images/Greece/AthensAcropolisSepia.jpg', 'Athens Acropolis'));
+// greeceImages.push(createImage('../images/Greece/AthensAcropolisSepia.jpg', 'Athens Acropolis'));
 
-console.log(greeceImages);
-$("div.Greece").append(greeceImages);
+// console.log(greeceImages);
+// $("div.Greece").append(greeceImages);
 
 
 
