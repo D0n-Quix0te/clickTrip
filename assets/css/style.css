@@ -317,6 +317,7 @@ ul {
 .back {
   width: 250px;
   height: 275px;
+  margin-bottom: 40px;
 }
 /* flip speed
 goes here */
@@ -395,5 +396,5 @@ goes here */
 }
 .panel-default {
 	width: 250px;
-	margin-bottom: 20px !important;
+	
 }
