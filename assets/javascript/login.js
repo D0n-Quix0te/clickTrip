@@ -38,6 +38,8 @@ $("#upload-Button").on("click", function(event) {
   };
     // console.log(file);
 
+
+
     // var uploadTask = storageRef.child(city + state + country + title).put(file);
 
     // uploadTask.on('state_changed', function(snapshot) {
