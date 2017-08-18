@@ -162,7 +162,7 @@ $("#upload-Button").on("click", function(event) {
  
 
 
-function showImage() {
+// function showImage() {
   var storageRef = firebase.storage().ref();
   var spaceRef = storageRef.child("Germany/BautzenBunt.jpg");
   spaceRef.getDownloadURL().then(function(url) {
@@ -175,7 +175,7 @@ function showImage() {
     console.error(error);
 
   });
-};
+// };
 
   function clear() {
     $("#city-Input").val("");
