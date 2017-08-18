@@ -203,8 +203,8 @@ function showImage() {
 })
 function showImage() {
   var storageRef = firebase.storage().ref();
-         var spaceRef = storageRef.child('Berlin');
-         storageRef.child('Berlin').getDownloadURL().then(function(url) {
+         var spaceRef = storageRef.child('Germany');
+         storageRef.child('Germany').getDownloadURL().then(function(url) {
              var test = url;
              alert(url);
              document.querySelector('img').src = test;
@@ -214,6 +214,19 @@ function showImage() {
          });
 }
 
+var greeceImage = function(src, title) {
+  var img = new Image();
+  img.src = src;
+  img.alt = alt;
+  img.title = title;
+  return img;
+};
+
+var images = [];
+
+images.push(createImage('AthensAcropolisSepia.jpg', 'Athens Acropolis'));
+
+console.log(images);
 
 
 
