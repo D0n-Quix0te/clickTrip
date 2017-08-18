@@ -30,13 +30,19 @@ $("#upload-Button").on("click", function(event) {
   var state = $("#state-Input").val().trim();
   var country = $("#country-Input").val().trim();
   var title = $("#title-Input").val().trim();
- 
+  // var metadata = {
+  //   customMetadata: {
+  //     city: "",
+  //     state: "",
+  //     country:
+  //   }
+  // }
   var addPhoto = {
     "city": city,
     "state": state,
     "country": country,
     "title": title,
-    "url": url,
+    
     
   };
 
