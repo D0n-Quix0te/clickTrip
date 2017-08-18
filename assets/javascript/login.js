@@ -45,6 +45,7 @@ $("#upload-Button").on("click", function(event) {
     city: city,
     country: country,
     title: title,
+    downloadUrl: downloadUrl;
    
     dateAdded: firebase.database.ServerValue.TIMESTAMP,
 
@@ -79,7 +80,7 @@ $("#upload-Button").on("click", function(event) {
   console.log(title);
   // console.log(photoLocation);
   
-  database.ref().on("child_added", function(childSnapshot) {
+  database.ref().on("child_added", "child_changed", function(childSnapshot) {
 
     photoRef.getDownloadURL().then(function(url) {
       console.log('downloadUrl=', url);
@@ -164,9 +165,9 @@ $("#upload-Button").on("click", function(event) {
 
 // function showImage(origin, image) {
   var storageRef = firebase.storage().ref();
-  var spaceRef = storageRef.child(authWrapper + "/" + location);
+  var spaceRef = storageRef.child("Germany/BautzenBunt.jpg");
   spaceRef.getDownloadURL().then(function(url) {
-    var className = authWrapper.toLowerCase();
+    var className = origin.toLowerCase();
     $("." + className).append("<img src =" + url + ">");
     
     // document.querySelector('img').src = url;
