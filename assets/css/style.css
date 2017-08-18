@@ -63,9 +63,7 @@
 	letter-spacing: 1.4px;
 	margin-bottom: 0px !important;
 }
-.panel-default {
-	width: 250px;
-}
+
 .Germany {
 	background-image: url("../images/PanelPhotos/BerlinShellHaus.jpg");
 	background-position: center;
@@ -318,7 +316,7 @@ ul {
 .front,
 .back {
   width: 250px;
-  height: 250px;
+  height: 275px;
 }
 /* flip speed
 goes here */
@@ -395,4 +393,7 @@ goes here */
 	height: 200px;
 	width: 100%;
 }
-
+.panel-default {
+	width: 250px;
+	margin-bottom: 20px !important;
+}
