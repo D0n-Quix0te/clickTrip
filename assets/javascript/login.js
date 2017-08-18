@@ -103,7 +103,7 @@ $("#upload-Button").on("click", function(event) {
     var titleName = (childSnapshot.val().title);
 
 });
-    $(".initial").append("<div> " + cityName + countryName + titleName " </div>");
+    // $(".initial").append("<div> " + cityName + countryName + titleName " </div>");
     
   })
  
@@ -165,7 +165,7 @@ $("#upload-Button").on("click", function(event) {
 
 function showImage() {
   var storageRef = firebase.storage().ref();
-  var spaceRef = storageRef.child("Germany");
+  var spaceRef = storageRef.child("images/Germany/BautzenBunt.jpg");
   storageRef.child("Germany").getDownloadURL().then(function(url) {
     console.log('Got download URL');
     var test = url;
