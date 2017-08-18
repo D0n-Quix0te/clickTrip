@@ -48,10 +48,10 @@
         					<li><a href="#"> About </a></li>
         					<li class="dropdown">
           						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Tips <span class="caret"></span></a>
-                                <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Tips <span class="caret"></span></a>
-          					<li><a id="upload-Button-Initial" role="button" href=""> Upload </a></li>         					 
-                            <li><a id="logout-Button" role="button" href=""> Logout </a></li>	
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Profile Settings <span class="caret"></span></a>
+          					<li><a id="upload-Button-Initial" href=""> Upload </a></li>         					 
+                            <li><a id="logout-Button" href=""> Logout </a></li>	
                         </ul>                   		
 					</div>
 			</div>
@@ -258,7 +258,7 @@
                             <div id="profilepic"></div>
                             	<ul class="personal-info">
                                 	<li id="name-display"> Name: </li>
-                                	<li id="email"> E-mail: </li>
+                                	<li id="email-shiz"> E-mail: </li>
                                 	<li> Location: </li>
                                 	<li> Countries Visited: </li>
                                 	<li> About Me: </li>
@@ -276,7 +276,10 @@
 
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
 
 <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-auth.js"></script>
@@ -310,7 +313,7 @@
     uid = user.uid;  
     $("#name-display").append(name);
     $("#profilepic").html("<img src= " + photoUrl + ">");
-    $("email").append(email);
+    $("#email-shiz").append(email);
     $("#profilepic").html("<img src='https://process.filestackapi.com/AX73qH5DQ1CgQfGYC0YKYz/resize=width:200/" + photoUrl + "'>");
 
     $("#profilepic").addClass("smaller");
