@@ -85,6 +85,10 @@ $("#upload-Button").on("click", function(event) {
     photoRef.getDownloadURL().then(function(url) {
       console.log('downloadUrl=', url);
       
+      database.ref().push({
+        downloadUrl: downloadUrl,
+      });
+
       var img = $('<img>');
       $(img).attr('src', url);
 
