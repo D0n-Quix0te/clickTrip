@@ -29,14 +29,36 @@ $("#upload-Button").on("click", function(event) {
   var state = $("#state-Input").val().trim();
   var country = $("#country-Input").val().trim();
   var title = $("#title-Input").val().trim();
-  var addPhoto = {
+  var file = {
     "city": city,
     "state": state,
     "country": country,
     "title": title,
     
   };
+    console.log(file.name);
 
+    var uploadTask = storageRef.child(city + state + country + title).put(file);
+
+    uploadTask.on('state_changed', function(snapshot) {
+
+      var progress = (snapshot.bytesTransferred/snapshot.totalBytes) * 100;
+      console.log('Upload is ' + progress + '% done');
+      switch (snapshot.state) {
+        case firebase.storage.TaskState.PAUSED:
+          console.log('Upload is Paused');
+          break;
+        case firebase.storage.TaskState.RUNNING:
+          console.log('Upload is Running');
+          break;
+      }
+    }, function(error) {
+
+    }, function() {
+
+      var downloadURL = uploadTask.snapshot.downloadURL;
+      console.log(downloadUrl);
+    });
   
 
   var storage = firebase.storage();
@@ -84,6 +106,7 @@ $("#upload-Button").on("click", function(event) {
 
   });
 
+
       var img = $('<img>');
       $(img).attr('src', url);
 
@@ -102,7 +125,7 @@ $("#upload-Button").on("click", function(event) {
     var countryName = (childSnapshot.val().country);
     var titleName = (childSnapshot.val().title);
 
-// $(".germany").append("<img src= " + url + ">" + "<p>" + cityName + "</p>"); 
+  $(".germanPhotos").append("<img src=" + url + ">" + "<p>" + cityName + "</p>"); 
 });
    
   })
@@ -164,18 +187,18 @@ $("#upload-Button").on("click", function(event) {
 
 
 // function showImage(origin, image) {
-  // var storageRef = firebase.storage().ref();
-  // var spaceRef = storageRef.child("Germany/BautzenBunt.jpg");
-  // spaceRef.getDownloadURL().then(function(url) {
-  //   // var className = origin.toLowerCase();
-  //   $(".germany").append("<img src= " + url + " >");
+  var storageRef = firebase.storage().ref();
+  var spaceRef = storageRef.child("Germany/BautzenBunt.jpg");
+  spaceRef.getDownloadURL().then(function(url) {
+    // var className = origin.toLowerCase();
+    $(".germanPhotos").append("<img src= " + url + " >");
     
-  //   // document.querySelector('img').src = url;
-  // }).catch(function(error) {
+    // document.querySelector('img').src = url;
+  }).catch(function(error) {
 
-  //   console.error(error);
+    console.error(error);
 
-  // });
+  });
 // };
 
   function clear() {
