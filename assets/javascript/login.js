@@ -162,8 +162,8 @@ $("#upload-Button").on("click", function(event) {
 
 function showImage() {
   var storageRef = firebase.storage().ref();
-  var spaceRef = storageRef.child("images/1502646473076.jpg");
-  storageRef.child("1502646473076.jpg").getDownloadURL().then(function(url) {
+  var spaceRef = storageRef.child("Germany");
+  storageRef.child("Germany").getDownloadURL().then(function(url) {
     console.log('Got download URL');
     var test = url;
     alert(url);
@@ -222,11 +222,12 @@ var greeceImage = function(src, title) {
   return img;
 };
 
-var images = [];
+var greeceImages = ['AthensAcropolisSepia.jpg'];
 
 images.push(createImage('AthensAcropolisSepia.jpg', 'Athens Acropolis'));
 
 console.log(images);
+$("greece.html").append(greeceImages);
 
 
 
