@@ -103,7 +103,6 @@ $("#upload-Button").on("click", function(event) {
     var titleName = (childSnapshot.val().title);
 
 });
-    // $(".initial").append("<div> " + cityName + countryName + titleName " </div>");
     
   })
  
