@@ -264,9 +264,9 @@ var createImage = function(src, title) {
 
 var greeceImages = ['AthensAcropolisSepia.jpg'];
 
-greeceImages.push(createImage('AthensAcropolisSepia.jpg', 'Athens Acropolis'));
+greeceImages.push(createImage('../images/Greece/AthensAcropolisSepia.jpg', 'Athens Acropolis'));
 
-console.log(images);
+console.log(greeceImages);
 $("greece.html").append(greeceImages);
 
 
